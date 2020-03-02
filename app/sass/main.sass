@@ -1,0 +1,141 @@
+h1,h2,h3,h4,h5,h6
+	color: #666666
+	font-weight: 600
+
+a
+	color: #4BC0E4
+	text-decoration: none
+a:hover
+	color: #4BC0E4
+	text-decoration: underline
+	// transition: all .3s ease-out
+a:visited
+	color: #C6C6C6
+	text-decoration: underline
+
+button
+	color: #B7B7B7 
+
+body
+	color: #B7B7B7
+	font-size: 14px
+	font-family: Ubuntu
+	font-weight: 400
+	line-height: 150%
+
+.btn,
+.btn--v2,
+.btn--v3
+	padding: 10px
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 2px
+	border: 1px solid #D8D8D8
+	cursor: pointer
+	&:hover,
+		border-color: #4BC0E4
+		color: #4BC0E4
+
+.btn--v2
+	background-color: #4BC0E4
+	border-color: #4BC0E4
+	color: white
+	&:visited, &:focus
+		background-color: #4BC0E4
+		border-color: #4BC0E4
+		color: white
+	&:active
+		color: #4BC0E4
+		border: 1px solid #4BC0E4
+		background-color: white
+	&:hover
+		color: #4BC0E4
+		border: 1px solid #4BC0E4
+		background-color: white
+
+
+
+header
+	background-color: #FDFDFD
+	padding: 20px 0
+	border-bottom: 1px solid #F5F5F5
+	a
+		color: #B7B7B7
+		text-decoration: none
+		&:hover
+			color: #444444
+			text-decoration: none
+
+header > .row
+	margin-top: 10px
+	&:firts-child
+		margin-top: 0
+header .logo
+	width: 160px
+	overflow: hidden
+	width: 100%
+	img
+		width: 100%
+header .location
+	display: flex
+	align-items: center
+	i
+		margin-right: 10px
+header .menu-top
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	ul
+		list-style: none
+		li
+			display: inline-block
+			margin-right: 15px
+			&:last-child
+				margin-right: 0
+			a
+				i
+					margin-right: 7px
+header .menu-burger
+	.btn i
+		margin-right: 10px
+
+
+header form
+	height: 100%
+header .search input
+	width: 100%
+	height: 100%
+	border-radius: 3px
+	border: 1px solid #D8D8D8
+	padding: 10px 15px
+	position: relative
+	display: block
+	font-weight: 400
+
+header .search
+	position: relative
+	&:hover
+		input
+			border-color: #4BC0E4
+		button
+			i
+				color: #4BC0E4
+	button
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		top: 0
+		left: calc(100% - 60px)
+		position: absolute
+		height: 100%
+		width: 45px
+		&:hover
+
+header .search input:focus
+	border-color: #4BC0E4
+
+header .search input:focus + button
+	color: #4BC0E4
+

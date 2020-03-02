@@ -1,0 +1,27 @@
+{
+  "name": "jnjn",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "skyweb24"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Xround2303/jnjn",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reset.css": "^1.1.3"
+  },
+  "devDependencies": {
+    "reset.css": "^1.1.3",
+    "Jquery": "^3.4.1",
+    "bootstrap": "https://github.com/twbs/bootstrap.git#^4.4.1",
+    "font-awesome": "^5.12.1"
+  }
+}
