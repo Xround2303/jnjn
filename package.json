@@ -1,0 +1,35 @@
+{
+  "name": "jnjn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xround2303/jnjn.git"
+  },
+  "author": "skyweb24",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xround2303/jnjn/issues"
+  },
+  "homepage": "https://github.com/Xround2303/jnjn#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bower": "^1.8.8",
+    "browser-sync": "^2.24.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^5.1.0"
+  }
+}
