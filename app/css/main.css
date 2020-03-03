@@ -6,12 +6,12 @@ a {
   color: #4BC0E4;
   text-decoration: none; }
 
-a:hover {
-  color: #4BC0E4;
-  text-decoration: underline; }
-
 a:visited {
   color: #C6C6C6;
+  text-decoration: underline; }
+
+a:hover {
+  color: #4BC0E4;
   text-decoration: underline; }
 
 button {
