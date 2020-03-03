@@ -75,7 +75,6 @@ header {
     color: #B7B7B7;
     text-decoration: none; }
     header a:hover {
-      color: #444444;
       text-decoration: none; }
 
 header > .row {
@@ -140,7 +139,8 @@ header .search input {
   padding: 10px 15px;
   position: relative;
   display: block;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #444; }
   header .search input::-webkit-input-placeholder {
     color: #D8D8D8; }
   header .search input::-moz-placeholder {
@@ -154,6 +154,14 @@ header .search {
   position: relative; }
   header .search:hover input {
     border-color: #4BC0E4; }
+    header .search:hover input::-webkit-input-placeholder {
+      color: #4BC0E4; }
+    header .search:hover input::-moz-placeholder {
+      color: #4BC0E4; }
+    header .search:hover input::-ms-input-placeholder {
+      color: #4BC0E4; }
+    header .search:hover input::placeholder {
+      color: #4BC0E4; }
   header .search:hover button i {
     color: #4BC0E4; }
   header .search button {
@@ -179,6 +187,14 @@ header .search {
 
 header .search input:focus {
   border-color: #4BC0E4; }
+  header .search input:focus::-webkit-input-placeholder {
+    color: #4BC0E4; }
+  header .search input:focus::-moz-placeholder {
+    color: #4BC0E4; }
+  header .search input:focus::-ms-input-placeholder {
+    color: #4BC0E4; }
+  header .search input:focus::placeholder {
+    color: #4BC0E4; }
 
 header .search input:focus + button {
   color: #4BC0E4; }
