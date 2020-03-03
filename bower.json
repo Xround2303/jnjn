@@ -22,6 +22,7 @@
     "reset.css": "^1.1.3",
     "Jquery": "^3.4.1",
     "bootstrap": "https://github.com/twbs/bootstrap.git#^4.4.1",
-    "font-awesome": "^5.12.1"
+    "font-awesome": "^5.12.1",
+    "owl.carousel": "https://github.com/OwlFonk/OwlCarousel2.git#^2.3.4"
   }
 }

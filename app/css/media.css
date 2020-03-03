@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+  header .menu-burger .btn {
+    height: 100%; }
+  header .menu-burger .btn i {
+    margin-right: unset; } }
+
+@media screen and (max-width: 576px) {
+  .location, .menu-top {
+    padding-bottom: 10px; }
+  .header-main-button {
+    margin-top: 10px; } }
