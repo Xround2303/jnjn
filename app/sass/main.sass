@@ -18,7 +18,7 @@ button
 
 body
 	color: #B7B7B7
-	font-size: 14px
+	font-size: 12px
 	font-family: Ubuntu
 	font-weight: 400
 	line-height: 150%
@@ -112,6 +112,9 @@ header .search input
 	position: relative
 	display: block
 	font-weight: 400
+	&::placeholder 
+		color: #D8D8D8
+
 
 header .search
 	position: relative
@@ -138,4 +141,17 @@ header .search input:focus
 
 header .search input:focus + button
 	color: #4BC0E4
+
+
+@media screen and (max-width: 768px)
+	header .menu-burger .btn
+		height: 100%
+	header .menu-burger .btn i
+		margin-right: unset
+
+@media screen and (max-width: 576px)
+	.location, .menu-top
+		padding-bottom: 10px
+	.header-main-button
+		margin-top: 10px
 
