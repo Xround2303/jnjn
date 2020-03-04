@@ -3,27 +3,30 @@ h1,h2,h3,h4,h5,h6
 	font-weight: 600
 h2
 	font-size: 28px
-	padding: 25px 0
+	padding: 40px 0
 	display: block
 	width: 100%
+	line-height: normal
+h4
+	font-size: 18px
 
 ul li.item
 	display: inline-block
 
 a
-	color: #4BC0E4
+	color: #666
 	text-decoration: none
 a:visited
 	color: #C6C6C6
 	text-decoration: underline
 a:hover
 	color: #4BC0E4
-	text-decoration: underline
 	// transition: all .3s ease-out
 
 
 button
 	color: #B7B7B7 
+
 
 body
 	color: #B7B7B7
@@ -31,7 +34,8 @@ body
 	font-family: Ubuntu
 	font-weight: 400
 	line-height: 150%
-	min-height: 120vh
+.app 
+	// min-height: 300vh
 
 .btn,
 .btn--v2,
@@ -65,13 +69,18 @@ body
 		background-color: white
 
 
-body > .container-fluid
+body header.container-fluid
 	padding-right: 0
 	padding-left: 0
+
 header
 	background-color: #FDFDFD
-	padding: 20px 0
+	position: sticky
 	border-bottom: 1px solid #F5F5F5
+	padding: 10px 0 20px 0
+	top: 0
+	left: 0
+	z-index: 10	
 	a
 		color: #B7B7B7
 		text-decoration: none
@@ -159,6 +168,7 @@ header .search input:focus + button
 	color: #4BC0E4
 
 
+
 .tag
 	position: absolute
 	background-color: rgba(70, 70, 70, 0.35)
@@ -166,15 +176,14 @@ header .search input:focus + button
 	padding: 5px 10px
 	border-radius: 2px
 	font-weight: bold
-	right: 10px
-	top: 10px
 	font-size: 13px
 	display: flex
 	justify-content: center
 	align-items: center
 	z-index: 2
+	span
+		margin-left: 5px
 	i
-		margin-right: 5px
 		font-size: 10px
 
 
@@ -205,6 +214,10 @@ header .search input:focus + button
 			width: 100%
 			display: flex
 			align-items: center
+			position: relative
+			.tag
+				right: 10px
+				top: 10px
 			.img
 				width: 100%
 				height: 100%
@@ -223,7 +236,7 @@ header .search input:focus + button
 		&:hover
 			color: #4BC0E4
 	.owl-prev, .owl-next
-		top: calc(50% - 20px)
+		top: calc(50% - 35px)
 	.owl-prev
 		position: absolute
 		left: 0
@@ -233,6 +246,126 @@ header .search input:focus + button
 
 
 
+
+
+
+
+.adv-list
+	.adv-item
+		border-radius: 2px
+		border: 1px solid #D8D8D8
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-bottom: 30px
+		.adv-preview
+			position: relative
+			.tag-list
+				position: absolute
+				top: 0px
+				left: 0px
+				padding: 10px
+				display: flex
+				width: 100%
+				justify-content: space-between
+				.tag
+					position: relative
+					color: white
+					text-decoration: none
+					.fas.fa-star
+						display: none
+			.tag.active
+				.far.fa-star
+					display: none
+				.fas.fa-star
+					display: block
+
+
+			.preview
+				max-height: 200px
+				overflow: hidden
+				display: flex
+				align-items: center
+				justify-content: center
+				position: relative
+				img
+					width: 100%
+		.adv-prop
+			padding: 15px 10px
+			color: #444
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 100%
+			flex: 2
+			.prop-info
+				.name
+					font-size: 14px
+					font-weight: 500
+					line-height: normal
+					a
+						color: #444
+						text-decoration: none
+				.price
+					font-size: 14px
+					font-weight: 600
+					color: #666
+					padding: 10px 0
+			.props-list
+				width: 100%
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-between
+				.prop-item
+					margin-right: 10px
+					display: flex
+					flex-wrap: nowrap
+					text-decoration: none
+					align-items: center
+					color: #CFCFCF
+					i
+						margin-right: 7px
+					span
+						font-weight: bold
+						
+
+footer
+	border-top: 1px solid #F5F5F5
+	padding: 40px 0 40px 0
+	margin-top: 40px
+	.menu_b
+		h4
+			margin-bottom: 10px
+		ul
+			list-style: none;
+			
+			li
+				margin: 5px 0
+				a
+					font-size: 14px
+	> .container > .row > div
+		margin-bottom: 30px
+	.menu_social_b
+		.item a
+			width: 20px
+			height: 20px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			padding: 15px
+			color: white
+		.item
+			margin-right: 5px
+			&:last-of-type
+				margin-right: 0px
+		.vk a
+			background-color: #4A76A8
+		.ok a
+			background-color: #EE8208
+		.tw a
+			background-color: #1DA1F2
+	
 
 
 
