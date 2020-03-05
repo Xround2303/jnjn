@@ -8,4 +8,6 @@
   .location, .menu-top {
     padding-bottom: 10px; }
   .header-main-button {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+  .pagination .list .item {
+    padding: 15px; } }

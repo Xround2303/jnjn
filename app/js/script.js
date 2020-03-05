@@ -30,6 +30,17 @@ $(document).ready(function(){
 		}
 	});
 
+	$(".detail-list-photo").owlCarousel({
+		items: 5,
+		margin: 10,
+		lazyLoad: true,
+		// loop: true,
+		autoplay: true,
+		autoplayTimeout: 3000,
+    	navText : ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+    	nav: true,
+		responsive: {}
+	});
 	
 
 	

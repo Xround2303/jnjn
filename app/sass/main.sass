@@ -1,16 +1,20 @@
 h1,h2,h3,h4,h5,h6
 	color: #666666
 	font-weight: 600
+	line-height: normal
+
+h1
+	font-size: 2rem
+	padding: 15px 0
 h2
-	font-size: 28px
-	padding: 40px 0
+	font-size: 1.5rem
+	padding: 20px 0
 	display: block
 	width: 100%
-	line-height: normal
 h4
-	font-size: 18px
+	font-size: 1rem
 
-ul li.item
+ul.list-row li.item
 	display: inline-block
 
 a
@@ -166,6 +170,38 @@ header .search input:focus
 
 header .search input:focus + button
 	color: #4BC0E4
+
+
+.breadcroumbs
+	padding-top: 30px
+	ul
+		display: flex
+		align-items:center
+		list-style: none
+		flex-wrap: wrap
+		li
+			display: flex
+			align-items: center
+			font-size: 14px
+			color: #C6C6C6
+			> span
+				color: #4BC0E4
+			a
+				color: #C6C6C6
+				&:hover
+					color: #4BC0E4
+			&::after
+				content: ""
+				width: 20px
+				height: 2px
+				font-size: 12px
+				background: #EEEEEE
+				display: block
+				margin: 0px 15px
+				position: relative
+			&:last-of-type
+				&::after
+					display: none
 
 
 
@@ -327,8 +363,119 @@ header .search input:focus + button
 						margin-right: 7px
 					span
 						font-weight: bold
-						
 
+.pagination
+	.list
+		display: flex	
+		flex-wrap: wrap
+		width: 100%
+		overflow: hidden
+		.item
+			width: 20px
+			height: 20px
+			display: flex
+			padding: 20px
+			border-radius: 2px 
+			border: 1px solid #D8D8D8
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 5px
+			color: #D8D8D8
+			&:first-of-type
+				margin-left: unset
+			&:last-of-type
+				margin-right: unset
+		.item.active
+			border: 1px solid #4BC0E4
+			color: white
+			background: #4BC0E4
+			cursor: default
+		.item:not(.active)
+			&:hover
+				color: #4BC0E4
+				border: 1px solid #4BC0E4
+
+.detail
+	.column-l
+		height: 300vh
+		.content
+			.detail-list-photo
+				.item
+					
+	.column-r
+		.content
+			background: #FBFBFB
+			padding: 20px 20px 40px 20px
+			position: sticky
+			top: 0
+			.title
+				align-items: center
+				h1
+					font-size: 18px
+				.favorite_d
+					font-size: 18px
+					display: flex
+					justify-content: center
+					align-items: center
+					.fas
+						display: none
+				.active
+					.fas
+						display: block
+					.far
+						display: none
+			.adv-info-list
+				padding-top: 10px
+				display: flex
+				flex-direction: row
+				align-items: center
+				.inf-item
+					margin-right: 10px
+					i
+						margin-right: 5px
+						font-style: normal
+			.price
+				padding: 20px 0
+				span
+					font-size: 1.8rem
+					font-weight: bold
+					color: #666
+					margin-right: 5px
+					&:last-of-type
+						color: #B7B7B7
+						font-weight: 300
+						font-size: 1rem
+			.author
+				display: flex
+				justify-content:center
+				.authon-photo
+					display: flex
+					justify-content: center
+					align-items: center
+					margin-right: 15px
+					a
+						border-radius: 50%
+						overflow: hidden
+						display: block
+				.authon-title
+					display: flex
+					flex-direction: column
+					justify-content: center
+					a
+						display: flex
+						flex-direction: column
+						.compony
+							// color: #B7B7B7
+						.name
+							font-size: 14px
+							color: #333
+			.btn
+				margin-top: 10px
+			.share
+				padding: 20px 0
+				.title
+					padding: 5px 0
 footer
 	border-top: 1px solid #F5F5F5
 	padding: 40px 0 40px 0
@@ -345,27 +492,27 @@ footer
 					font-size: 14px
 	> .container > .row > div
 		margin-bottom: 30px
-	.menu_social_b
-		.item a
-			width: 20px
-			height: 20px
-			display: flex
-			justify-content: center
-			align-items: center
-			border-radius: 50%
-			padding: 15px
-			color: white
-		.item
-			margin-right: 5px
-			&:last-of-type
-				margin-right: 0px
-		.vk a
-			background-color: #4A76A8
-		.ok a
-			background-color: #EE8208
-		.tw a
-			background-color: #1DA1F2
-	
+.menu_social_b
+	.item a
+		width: 20px
+		height: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		padding: 15px
+		color: white
+	.item
+		margin-right: 5px
+		&:last-of-type
+			margin-right: 0px
+	.vk a
+		background-color: #4A76A8
+	.ok a
+		background-color: #EE8208
+	.tw a
+		background-color: #1DA1F2
+
 
 
 
