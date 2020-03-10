@@ -1,0 +1,53 @@
+.input-range
+	.slider
+		width: 100%
+		background: #D8D8D8
+		border-radius: 20px
+		.item
+			background: #4BC0E4
+			border-radius: 50%
+			top: -0.25em!important
+		.range
+			background: #4BC0E4
+	.input-in-out
+		margin-top: 15px
+
+
+
+.input-in-out
+	display: flex
+	justify-content: center
+	&:focus-within
+		input
+			border-color: #4BC0E4
+	&:hover input
+		border-color: #4BC0E4
+	.input
+		display: flex
+		width: 50%
+		position: relative
+		input
+			text-align: center
+			width: 100%
+			padding: 7px 25px
+			appearance: none
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button
+				-webkit-appearance: none
+		span
+			position: absolute
+			bottom: 5px
+			font-size: 10px
+			color: #D8D8D8
+		span.right
+			right: 10px
+		span.left
+			left: 10px
+		&:first-of-type input
+			border-right: 1
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+		&:last-of-type input
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			border-left: 0

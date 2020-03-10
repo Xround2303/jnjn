@@ -58,6 +58,9 @@ label.error {
   color: #FBA08C;
   font-size: 12px; }
 
+label span {
+  color: #D8D8D8; }
+
 .input-group {
   margin: 10px 0; }
 
@@ -273,54 +276,6 @@ select {
   select:focus {
     border-color: #4BC0E4; }
 
-.input-to-do {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .input-to-do:focus-within input {
-    border-color: #4BC0E4; }
-  .input-to-do:hover input {
-    border-color: #4BC0E4; }
-  .input-to-do .input {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 50%;
-    position: relative; }
-    .input-to-do .input input {
-      text-align: center;
-      width: 100%;
-      padding: 7px 25px;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none; }
-      .input-to-do .input input::-webkit-outer-spin-button, .input-to-do .input input::-webkit-inner-spin-button {
-        -webkit-appearance: none; }
-    .input-to-do .input span {
-      position: absolute;
-      bottom: 5px;
-      left: 10px;
-      font-size: 10px;
-      color: #D8D8D8; }
-    .input-to-do .input:first-of-type input {
-      border-right: 1;
-      -webkit-border-top-right-radius: 0;
-              border-top-right-radius: 0;
-      -webkit-border-bottom-right-radius: 0;
-              border-bottom-right-radius: 0; }
-    .input-to-do .input:last-of-type input {
-      -webkit-border-top-left-radius: 0;
-              border-top-left-radius: 0;
-      -webkit-border-bottom-left-radius: 0;
-              border-bottom-left-radius: 0;
-      border-left: 0; }
-
 button, .btn, .btn--v2, .btn--v3 {
   padding: 8px 18px;
   display: -webkit-inline-box;
@@ -405,6 +360,9 @@ header > .row {
   margin-top: 10px; }
   header > .row:firts-child {
     margin-top: 0; }
+
+header .btn, header button {
+  padding: 10px; }
 
 header .logo {
   width: 160px;
@@ -1151,6 +1109,73 @@ footer {
 
 .menu_social_b .tw a {
   background-color: #1DA1F2; }
+
+.input-range .slider {
+  width: 100%;
+  background: #D8D8D8;
+  -webkit-border-radius: 20px;
+          border-radius: 20px; }
+  .input-range .slider .item {
+    background: #4BC0E4;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    top: -0.25em !important; }
+  .input-range .slider .range {
+    background: #4BC0E4; }
+
+.input-range .input-in-out {
+  margin-top: 15px; }
+
+.input-in-out {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .input-in-out:focus-within input {
+    border-color: #4BC0E4; }
+  .input-in-out:hover input {
+    border-color: #4BC0E4; }
+  .input-in-out .input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    position: relative; }
+    .input-in-out .input input {
+      text-align: center;
+      width: 100%;
+      padding: 7px 25px;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
+      .input-in-out .input input::-webkit-outer-spin-button, .input-in-out .input input::-webkit-inner-spin-button {
+        -webkit-appearance: none; }
+    .input-in-out .input span {
+      position: absolute;
+      bottom: 5px;
+      font-size: 10px;
+      color: #D8D8D8; }
+    .input-in-out .input span.right {
+      right: 10px; }
+    .input-in-out .input span.left {
+      left: 10px; }
+    .input-in-out .input:first-of-type input {
+      border-right: 1;
+      -webkit-border-top-right-radius: 0;
+              border-top-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0;
+              border-bottom-right-radius: 0; }
+    .input-in-out .input:last-of-type input {
+      -webkit-border-top-left-radius: 0;
+              border-top-left-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+              border-bottom-left-radius: 0;
+      border-left: 0; }
 
 @media screen and (max-width: 991px) {
   .detail .column-l .content .big-photo {

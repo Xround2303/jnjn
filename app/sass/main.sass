@@ -50,6 +50,9 @@ label
 label.error
 	color: #FBA08C
 	font-size: 12px
+label
+	span
+		color: #D8D8D8
 
 .input-group
 	margin: 10px 0
@@ -213,41 +216,8 @@ select
 	&:focus
 		border-color: #4BC0E4
 
-.input-to-do
-	display: flex
-	justify-content: center
-	&:focus-within
-		input
-			border-color: #4BC0E4
-	&:hover input
-		border-color: #4BC0E4
-	.input
-		display: flex
-		width: 50%
-		position: relative
-		input
-			text-align: center
-			width: 100%
-			padding: 7px 25px
-			appearance: none
-			&::-webkit-outer-spin-button,
-			&::-webkit-inner-spin-button
-				-webkit-appearance: none
-		span
-			position: absolute
-			bottom: 5px
-			left: 10px
-			font-size: 10px
-			color: #D8D8D8
-		&:first-of-type input
-			border-right: 1
-			border-top-right-radius: 0
-			border-bottom-right-radius: 0
-		&:last-of-type input
-			border-top-left-radius: 0
-			border-bottom-left-radius: 0
-			border-left: 0
-		
+
+
 button, .btn, .btn--v2, .btn--v3
 	// width: 100%
 	padding: 8px 18px
@@ -330,6 +300,10 @@ header > .row
 	margin-top: 10px
 	&:firts-child
 		margin-top: 0
+
+header
+	.btn, button
+		padding: 10px
 
 header .logo
 	width: 160px
@@ -839,5 +813,6 @@ footer
 
 
 
+@import "elem.sass"
 @import "media.sass"
 

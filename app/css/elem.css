@@ -1,0 +1,66 @@
+.input-range .slider {
+  width: 100%;
+  background: #D8D8D8;
+  -webkit-border-radius: 20px;
+          border-radius: 20px; }
+  .input-range .slider .item {
+    background: #4BC0E4;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    top: -0.25em !important; }
+  .input-range .slider .range {
+    background: #4BC0E4; }
+
+.input-range .input-in-out {
+  margin-top: 15px; }
+
+.input-in-out {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .input-in-out:focus-within input {
+    border-color: #4BC0E4; }
+  .input-in-out:hover input {
+    border-color: #4BC0E4; }
+  .input-in-out .input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    position: relative; }
+    .input-in-out .input input {
+      text-align: center;
+      width: 100%;
+      padding: 7px 25px;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
+      .input-in-out .input input::-webkit-outer-spin-button, .input-in-out .input input::-webkit-inner-spin-button {
+        -webkit-appearance: none; }
+    .input-in-out .input span {
+      position: absolute;
+      bottom: 5px;
+      font-size: 10px;
+      color: #D8D8D8; }
+    .input-in-out .input span.right {
+      right: 10px; }
+    .input-in-out .input span.left {
+      left: 10px; }
+    .input-in-out .input:first-of-type input {
+      border-right: 1;
+      -webkit-border-top-right-radius: 0;
+              border-top-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0;
+              border-bottom-right-radius: 0; }
+    .input-in-out .input:last-of-type input {
+      -webkit-border-top-left-radius: 0;
+              border-top-left-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+              border-bottom-left-radius: 0;
+      border-left: 0; }

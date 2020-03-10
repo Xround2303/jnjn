@@ -108,6 +108,40 @@ App = {
 	// DETAIL END
 
 
+
+	// ELEMETNS INPUTS
+	inputElemSite: function()
+	{
+		$( ".input-range .input-in-out .min, .input-range .input-in-out .max" ).on('change', function(){
+											
+
+			let min = $( ".input-range .input-in-out .min").val() * 1;
+			let max = $( ".input-range .input-in-out .max").val() * 1;
+
+			if( min > max )
+			{
+				min = max;
+				$( ".input-range .input-in-out .min").val(min);
+			}
+
+			if( min < 0 )
+			{
+				min = 0;
+				$( ".input-range .input-in-out .min").val(min);
+			}
+
+			if( max < min )
+			{
+				max = min;
+				$( ".input-range .input-in-out .max").val(max);
+			}
+
+	      	$( ".input-range .slider" ).slider( {"values": [min, max]} );
+
+	    })
+	},
+	// ELEMETNS INPUTS
+
 	// initialization
 	init: function()
 	{
@@ -116,6 +150,9 @@ App = {
 
 		// DETAIL
 		this.detailSelectBigPhoto();
+
+		// INPUTS
+		this.inputElemSite();
 
 	}
 
