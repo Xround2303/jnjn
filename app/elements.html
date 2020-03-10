@@ -40,18 +40,18 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-3 col-sm-2 col-md-3 col-lg-2 col-xl-2 menu-burger">
+					<div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2 menu-burger">
 						<a href="#" class="btn">
 							<i class="fas fa-bars"></i><span class="d-none d-lg-block d-md-block d-xl-block">Все категории</span>
 						</a>
 					</div>
-					<div class="col-9 col-sm-5 col-md-6 col-lg-7 col-xl-7 search">
+					<div class="col-9 col-sm-5 col-md-4 col-lg-6 col-xl-7 search">
 						<form action="/">
 							<input type="text" placeholder="Поиск...">
 							<button><i class="fas fa-search"></i></button>
 						</form>
 					</div>
-					<div class="col-12 col-sm-5 col-md-3 col-lg-3 col-xl-3 header-main-button">
+					<div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3 header-main-button">
 						<a href="#" class="btn btn--v2">Добавить объявление</a>
 					</div>
 				</div>
@@ -132,13 +132,114 @@
 					<h2>Пример оформления выпадающего списка</h2>
 					<div class="row">
 						<div class="col-xl-3">
-							<label for="select-1">Заголовок списка</label>
-							<select id="select-1">
-								<option>1</option>
-								<option>1</option>
-								<option>1</option>
-								<option>1</option>
-							</select>
+							<div class="select-group">
+								<label for="select-1">Заголовок списка</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Выбор 1</option>
+										<option>Выбор 2</option>
+										<option>Выбор 3</option>
+										<option>Выбор 4</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h2>Пример радиокнопок с зависимой и независимой фиксацией</h2>
+					<div class="row">
+						<div class="col-xl-3">
+							<label>Количество комнат</label>
+							<div class="check-group">
+								<div class="item-check">
+									<input type="checkbox" id="check-1">
+									<label for="check-1" class="checkbox"></label>
+									<label for="check-1">1</label>
+								</div>
+								<div class="item-check">
+									<input type="checkbox" id="check-2">
+									<label for="check-2" class="checkbox"></label>
+									<label for="check-2">2</label>
+								</div>
+								<div class="item-check">
+									<input type="checkbox" id="check-3">
+									<label for="check-3" class="checkbox"></label>
+									<label for="check-3">3</label>
+								</div>
+								<br>
+								<div class="item-check">
+									<input type="checkbox" id="check-4">
+									<label for="check-4" class="checkbox"></label>
+									<label for="check-4">4</label>
+								</div>
+								<div class="item-check">
+									<input type="checkbox" id="check-5">
+									<label for="check-5" class="checkbox"></label>
+									<label for="check-5">5</label>
+								</div>
+								<div class="item-check">
+									<input type="checkbox" id="check-6">
+									<label for="check-6" class="checkbox"></label>
+									<label for="check-6">6</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3">
+							<label>Наличие дверей</label>
+							<div class="radio-group">
+								<div class="item-check item-check--block">
+									<input type="radio" name="radio" id="radio-1">
+									<label for="radio-1" class="radio-btn"></label>
+									<label for="radio-1">Да</label>
+								</div>
+								<div class="item-check item-check--block">
+									<input type="radio" name="radio" id="radio-2">
+									<label for="radio-2" class="radio-btn"></label>
+									<label for="radio-2">Нет</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h2>Пример оформления кнопок</h2>
+					<div class="row" style="padding-top: 10px">
+						<div class="col-xl-12">
+							<button>Кнопка 1</button>
+							<a href="#" class="btn">Кнопка ссылка</a>
+							<a href="#" class="btn">1</a>
+						</div>
+					</div>
+					<div class="row" style="padding-top: 10px">
+						<div class="col-xl-12">
+							<button class="btn--v2">Кнопка 1</button>
+							<a href="#" class="btn btn--v2">Кнопка ссылка</a>
+							<a href="#" class="btn btn--v2">1</a>
+						</div>
+					</div>
+					<div class="row" style="padding-top: 10px">
+						<div class="col-xl-12">
+							<button class="btn--v3">Кнопка 1</button>
+							<a href="#" class="btn btn--v3">Кнопка ссылка</a>
+							<a href="#" class="btn btn--v3">1</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<h2>Другие поля ввода строки</h2>
+					<div class="row">
+						<div class="col-xl-3 col-12">
+							<div class="input-to-do">								
+								<div class="input"><input type="number"><span>от</span></div>
+								<div class="input"><input type="number"><span>до</span></div>
+							</div>
 						</div>
 					</div>
 				</div>

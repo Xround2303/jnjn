@@ -1,3 +1,10 @@
+body
+	color: #444
+	font-size: 12px
+	font-family: Ubuntu
+	font-weight: 400
+	line-height: 150%
+
 h1,h2,h3,h4,h5,h6
 	color: #666666
 	font-weight: 600
@@ -28,21 +35,25 @@ a:visited
 	text-decoration: underline
 a:hover
 	color: #4BC0E4
-	// transition: all .3s ease-out
+*
+	transition: all 0.05s ease-out
 
 label
 	display: block
 	font-size: 16px
-	padding-bottom: 10px
 	color: #666
 	width: 100%
+	padding-bottom: 10px
 	.require
 		color: #FBA08C
 		padding-right: 5px
 label.error
 	color: #FBA08C
 	font-size: 12px
-input
+
+.input-group
+	margin: 10px 0
+input[type=text], input[type=number]
 	border: 1px solid #D8D8D8
 	box-sizing: border-box
 	border-radius: 2px
@@ -54,11 +65,89 @@ input
 		color: #c3c3c3
 	&:focus
 		border-color: #4BC0E4
-		box-shadow:  9px 9px 18px #fafafa, -9px -9px 18px #ffffff
 	&:hover
 		border-color: #4BC0E4
-input.error
+input[type=text].error, input[type=number].error
 	border-color: #FBA08C
+
+
+.item-check
+	display: inline-flex
+	align-items: center
+	margin-bottom: 10px
+	margin-right: 10px
+	label
+		padding-bottom: 0
+		width: auto
+	label + label
+		padding-left: 7px
+.item-check--block
+	display: flex
+
+.item-check
+	input[type=checkbox]
+		display: none
+	.checkbox
+		width: 18px
+		height: 18px
+		border-radius: 2px
+		background: white
+		transition: none
+		border: 1px solid #D8D8D8
+		position: relative
+		display: block
+	input[type=checkbox]:checked  + .checkbox
+		background: #4BC0E4
+		border-color: #4BC0E4
+		&:after
+			content: "\f00c"
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			position: absolute
+			left: 0
+			top: 0
+			color: white
+			font-size: 10px
+			width: 100%
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+		
+.item-check
+	input[type=radio]
+		display: none
+	.radio-btn
+		width: 18px
+		height: 18px
+		border-radius: 2px
+		background: white
+		transition: none
+		border: 1px solid #D8D8D8
+		position: relative
+		display: block
+	input[type=radio]:checked  + .radio-btn
+		border-color: #4BC0E4
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			color: white
+			font-size: 10px
+			width: 100%
+			height: 100%
+			background: #4BC0E4
+			border: 2px solid white
+			display: flex
+			justify-content: center
+			align-items: center
+
+
+			
+
+	
+
 
 textarea
 	width: 100%
@@ -72,66 +161,109 @@ textarea
 	background: #ffffff
 	
 	&:hover
-		border-color: #4BC0E4
-		box-shadow:  9px 9px 18px #fafafa, -9px -9px 18px #ffffff
+		border-color: #4BC0E4		
 	&:focus
 		border-color: #4BC0E4
-		box-shadow:  9px 9px 18px #fafafa, -9px -9px 18px #ffffff
 	&::placeholder
 		color: #c3c3c3
 
 
+.select-group
+	.select 
+		&:hover
+			&::after
+				color: #4BC0E4 
+			select
+				border-color: #4BC0E4
+	.select
+		width: 100%
+		position: relative
+		&::after
+			content: "\f078"
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			height: 100%
+			position: absolute
+			right: 15px
+			top: 0
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			pointer-events: none
+			color: #D8D8D8
+.select-group:focus-within
+	.select
+		&::after
+			color: #4BC0E4
+	
+
 select
 	width: 100%
-	border: 1px solid #4BC0E4
+	display: block
+	border: 1px solid #D8D8D8
 	border-radius: 2px
 	padding: 7px 10px
 	font-size: 14px
 	outline: none
 	overflow: hidden
 	z-index: 1
+	appearance: none
 	&:hover
 		border-color: #4BC0E4
-		box-shadow:  9px 9px 18px #fafafa, -9px -9px 18px #ffffff
+	&:focus
+		border-color: #4BC0E4
 
-		
-
-
-
-
-
-
-button
-	color: #B7B7B7 
-
-
-body
-	color: #B7B7B7
-	font-size: 12px
-	font-family: Ubuntu
-	font-weight: 400
-	line-height: 150%
-
-.app 
-	// min-height: 300vh
-
-.list-row .item
-	display: inline-block
-
-
-.btn,
-.btn--v2,
-.btn--v3
-	padding: 10px
+.input-to-do
 	display: flex
+	justify-content: center
+	&:focus-within
+		input
+			border-color: #4BC0E4
+	&:hover input
+		border-color: #4BC0E4
+	.input
+		display: flex
+		width: 50%
+		position: relative
+		input
+			text-align: center
+			width: 100%
+			padding: 7px 25px
+			appearance: none
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button
+				-webkit-appearance: none
+		span
+			position: absolute
+			bottom: 5px
+			left: 10px
+			font-size: 10px
+			color: #D8D8D8
+		&:first-of-type input
+			border-right: 1
+			border-top-right-radius: 0
+			border-bottom-right-radius: 0
+		&:last-of-type input
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			border-left: 0
+		
+button, .btn, .btn--v2, .btn--v3
+	// width: 100%
+	padding: 8px 18px
+	display: inline-flex
 	justify-content: center
 	align-items: center
 	border-radius: 2px
 	border: 1px solid #D8D8D8
 	cursor: pointer
+	font-size: 14px
+	line-height: normal
+	color: #B7B7B7 
 	&:hover,
 		border-color: #4BC0E4
 		color: #4BC0E4
+
 
 .btn--v2
 	background-color: #4BC0E4
@@ -149,6 +281,31 @@ body
 		color: #4BC0E4
 		border: 1px solid #4BC0E4
 		background-color: white
+
+.btn--v3
+	background-color: #333333
+	border-color: #333333
+	color: white
+	&:visited, &:focus
+		background-color: #333333
+		border-color: #333333
+		color: white
+	&:active
+		color: #333333
+		border: 1px solid #333333
+		background-color: white
+	&:hover
+		color: #333333
+		border: 1px solid #333333
+		background-color: white
+
+
+.app 
+
+
+.list-row .item
+	display: inline-block
+
 
 
 body header.container-fluid
@@ -203,6 +360,8 @@ header .menu-top
 					margin-right: 7px
 
 header .menu-burger
+	.btn
+		width: 100%
 	.btn i
 		margin-right: 10px
 
@@ -213,13 +372,16 @@ header .search input
 	height: 100%
 	border-radius: 3px
 	border: 1px solid #D8D8D8
-	padding: 10px 15px
+	// padding: 10px 15px
 	position: relative
 	display: block
 	font-weight: 400
 	color: #444
 	&::placeholder 
 		color: #D8D8D8
+	&:focus + button
+		border-color: #4BC0E4
+	
 
 header .search
 	position: relative
@@ -231,6 +393,7 @@ header .search
 		button
 			i
 				color: #4BC0E4
+			border-color: #4BC0E4
 	button
 		cursor: pointer
 		display: flex
@@ -241,8 +404,11 @@ header .search
 		position: absolute
 		height: 100%
 		width: 45px
-		&:hover
-
+		border-left: none
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		margin-bottom: 0
+	
 header .search input:focus
 	border-color: #4BC0E4
 	&::placeholder 
@@ -251,6 +417,9 @@ header .search input:focus
 header .search input:focus + button
 	color: #4BC0E4
 
+header .header-main-button
+	.btn
+		width: 100%
 
 .breadcroumbs
 	padding-top: 30px
@@ -306,7 +475,6 @@ header .search input:focus + button
 	padding: 0px 25px
 	
 	.owl-item
-		transition: all .05s linear
 		&:hover
 			transform: scale(.985)
 			
@@ -510,6 +678,7 @@ header .search input:focus + button
 						align-items: center
 						border-radius: 2px
 						background: #F9F9F9
+						color: #D8D8D8
 					.owl-prev
 						position: absolute
 						left: 0
@@ -521,7 +690,8 @@ header .search input:focus + button
 						top: calc(50% - 15px)
 						font-size: 18px
 					&:hover
-						color: #4BC0E4
+						button
+							color: #4BC0E4
 	.column-r
 		.content
 			background: #FBFBFB
@@ -551,9 +721,11 @@ header .search input:focus + button
 				align-items: center
 				.inf-item
 					margin-right: 10px
+					color: #B7B7B7
 					i
 						margin-right: 5px
 						font-style: normal
+
 			.price
 				padding: 20px 0
 				span
