@@ -54,222 +54,6 @@ label
 	span
 		color: #D8D8D8
 
-.input-group
-	margin: 10px 0
-input[type=text], input[type=number]
-	border: 1px solid #D8D8D8
-	box-sizing: border-box
-	border-radius: 2px
-	padding: 7px 10px
-	font-size: 16px
-	color: #666
-	width: 100%
-	&::placeholder 
-		color: #c3c3c3
-	&:focus
-		border-color: #4BC0E4
-	&:hover
-		border-color: #4BC0E4
-input[type=text].error, input[type=number].error
-	border-color: #FBA08C
-
-
-.item-check
-	display: inline-flex
-	align-items: center
-	margin-bottom: 10px
-	margin-right: 10px
-	label
-		padding-bottom: 0
-		width: auto
-	label + label
-		padding-left: 7px
-.item-check--block
-	display: flex
-
-.item-check
-	input[type=checkbox]
-		display: none
-	.checkbox
-		width: 18px
-		height: 18px
-		border-radius: 2px
-		background: white
-		transition: none
-		border: 1px solid #D8D8D8
-		position: relative
-		display: block
-	input[type=checkbox]:checked  + .checkbox
-		background: #4BC0E4
-		border-color: #4BC0E4
-		&:after
-			content: "\f00c"
-			font-family: 'Font Awesome 5 Free'
-			font-weight: 900
-			position: absolute
-			left: 0
-			top: 0
-			color: white
-			font-size: 10px
-			width: 100%
-			height: 100%
-			display: flex
-			justify-content: center
-			align-items: center
-		
-.item-check
-	input[type=radio]
-		display: none
-	.radio-btn
-		width: 18px
-		height: 18px
-		border-radius: 2px
-		background: white
-		transition: none
-		border: 1px solid #D8D8D8
-		position: relative
-		display: block
-	input[type=radio]:checked  + .radio-btn
-		border-color: #4BC0E4
-		&:after
-			content: ""
-			position: absolute
-			left: 0
-			top: 0
-			color: white
-			font-size: 10px
-			width: 100%
-			height: 100%
-			background: #4BC0E4
-			border: 2px solid white
-			display: flex
-			justify-content: center
-			align-items: center
-
-
-			
-
-	
-
-
-textarea
-	width: 100%
-	border: 1px solid #D8D8D8
-	resize: none
-	padding: 7px 10px
-	border-radius: 2px
-	overflow: hidden
-	font-size: 14px
-	color: #666
-	background: #ffffff
-	
-	&:hover
-		border-color: #4BC0E4		
-	&:focus
-		border-color: #4BC0E4
-	&::placeholder
-		color: #c3c3c3
-
-
-.select-group
-	.select 
-		&:hover
-			&::after
-				color: #4BC0E4 
-			select
-				border-color: #4BC0E4
-	.select
-		width: 100%
-		position: relative
-		&::after
-			content: "\f078"
-			display: flex
-			justify-content: flex-end
-			align-items: center
-			height: 100%
-			position: absolute
-			right: 15px
-			top: 0
-			font-family: 'Font Awesome 5 Free'
-			font-weight: 900
-			pointer-events: none
-			color: #D8D8D8
-.select-group:focus-within
-	.select
-		&::after
-			color: #4BC0E4
-	
-
-select
-	width: 100%
-	display: block
-	border: 1px solid #D8D8D8
-	border-radius: 2px
-	padding: 7px 10px
-	font-size: 14px
-	outline: none
-	overflow: hidden
-	z-index: 1
-	appearance: none
-	&:hover
-		border-color: #4BC0E4
-	&:focus
-		border-color: #4BC0E4
-
-
-
-button, .btn, .btn--v2, .btn--v3
-	// width: 100%
-	padding: 8px 18px
-	display: inline-flex
-	justify-content: center
-	align-items: center
-	border-radius: 2px
-	border: 1px solid #D8D8D8
-	cursor: pointer
-	font-size: 14px
-	line-height: normal
-	color: #B7B7B7 
-	&:hover,
-		border-color: #4BC0E4
-		color: #4BC0E4
-
-
-.btn--v2
-	background-color: #4BC0E4
-	border-color: #4BC0E4
-	color: white
-	&:visited, &:focus
-		background-color: #4BC0E4
-		border-color: #4BC0E4
-		color: white
-	&:active
-		color: #4BC0E4
-		border: 1px solid #4BC0E4
-		background-color: white
-	&:hover
-		color: #4BC0E4
-		border: 1px solid #4BC0E4
-		background-color: white
-
-.btn--v3
-	background-color: #333333
-	border-color: #333333
-	color: white
-	&:visited, &:focus
-		background-color: #333333
-		border-color: #333333
-		color: white
-	&:active
-		color: #333333
-		border: 1px solid #333333
-		background-color: white
-	&:hover
-		color: #333333
-		border: 1px solid #333333
-		background-color: white
-
-
 .app 
 
 
@@ -769,6 +553,143 @@ header .header-main-button
 	> *
 		width: 100%!important
 		height: 100%!important
+
+
+
+
+
+
+
+
+
+
+
+.adv-render
+	> .row
+		&:first-of-type
+			margin-top: 50px
+	h2
+		padding-top: 0
+		font-size: 20px
+		margin-top: 10px
+	section 
+		margin-bottom: 50px
+	button
+		width: 100%
+			
+.filter_c
+	.filter_menu_l
+		width: 100%
+		height: 100%
+		display: flex
+	.line-v
+		border-right: 1px solid #f5f5f5
+	ul
+		list-style: none
+		font-size: 16px
+		li
+			margin-bottom: 7px
+		li.active a
+			color: #4BC0E4
+	.list-cat
+		// background: #FCFBFB
+		padding: 0 35px
+		padding-top: 10px
+		margin-top: 10px
+		.item
+			display: inline-flex
+			input[type=radio]
+				display: none
+			input[type=radio]:checked  + label
+				color: #4BC0E4
+				.img
+					border: 1px solid #4BC0E4
+			label 
+				cursor: pointer
+				.img
+					height: 70px
+					// width: 130px
+					overflow: hidden
+					border: 1px solid #d8d8d8
+					border-radius: 2px
+					display: flex
+					justify-content: center
+					align-items: center
+					img
+						width: 100%
+				.title
+					padding: 10px 0
+					width: 100%
+					text-align: center
+
+		.owl-nav
+			button
+				width: 25px
+				height: 25px
+				display: flex
+				justify-content: center
+				align-items: center
+				border-radius: 2px
+				background: #F9F9F9
+				color: #D8D8D8
+				top: calc(50% - 35px)
+				font-size: 18px
+				position: absolute
+				&:hover
+					color: #4BC0E4
+			.owl-prev
+				left: 0
+			.owl-next
+				right: 0
+	.list-model
+		.title
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-align: center
+			-webkit-align-items: center
+			-ms-flex-align: center
+			align-items: center
+			font-size: 14px
+			color: #C6C6C6
+			&::after
+				content: ""
+				width: 20px
+				height: 2px
+				font-size: 12px
+				background: #EEEEEE
+				display: block
+				margin: 0px 15px
+				position: relative
+		nav
+			display: flex
+			align-items: center
+			ul li
+				margin: 0
+				background: #F5F5F5
+				color: #666
+				padding: 4px 16px
+				border-radius: 2px
+				font-size: 14px
+				cursor: pointer
+				&:hover
+					background: #4BC0E4
+					color: white
+			.active
+				background: #4BC0E4
+				color: white
+
+
+
+
+	
+
+
+
+
+
+
 
 
 

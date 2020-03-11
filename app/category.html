@@ -84,11 +84,106 @@
 				<div class="col-xl-12">
 					<div class="filter_c">
 						<div class="row">
-							<div class="col-xl-2">
-								Меню раздела
+							<div class="col-xl-3">
+								<div class="filter_menu_l line-v">
+									<ul>
+										<li><a href="#">Транспорт</a></li>
+										<li class="active"><a href="#">Недвижимость</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Грузоперевозки</a></li>
+									</ul>
+								</div>
 							</div>
-							<div class="col-xl-10">
-								элементы фильтра
+							<div class="col-xl-8">
+								<div class="filter_menu_r">
+									<div class="row">
+										<div class="col-12">
+											<div class="btn-radio-group">
+												<div class="item-check">
+													<input type="radio" checked name="btn-radio" id="btn-radio-1">
+													<label for="btn-radio-1">Все</label>
+												</div>
+												<div class="item-check">
+													<input type="radio" name="btn-radio" id="btn-radio-2">
+													<label for="btn-radio-2">Продать</label>
+												</div>
+												<div class="item-check">
+													<input type="radio" name="btn-radio" id="btn-radio-3">
+													<label for="btn-radio-3">Сдать</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="list-cat owl-carousel">
+												<div class="item">
+													<input type="radio" id="cat-1" name="cat">
+													<label for="cat-1">
+														<div class="img">
+															<img src="/img/logotest.svg">
+														</div>
+														<div class="title">Категория 1</div>
+													</label>
+												</div>
+												<div class="item">
+													<input type="radio" id="cat-2" name="cat">
+													<label for="cat-2">
+														<div class="img">
+															<img src="/img/logotest.svg">
+														</div>
+														<div class="title">Категория 2</div>
+													</label>
+												</div>
+
+												<div class="item">
+													<input type="radio" id="cat-5" name="cat">
+													<label for="cat-5">
+														<div class="img">
+															<img src="/img/logotest.svg">
+														</div>
+														<div class="title">Категория 5</div>
+													</label>
+												</div>
+												<div class="item">
+													<input type="radio" id="cat-3" name="cat">
+													<label for="cat-3">
+														<div class="img">
+															<img src="/img/logotest.svg">
+														</div>
+														<div class="title">Категория 3</div>
+													</label>
+												</div>
+												<div class="item">
+													<input type="radio" id="cat-4" name="cat">
+													<label for="cat-4">
+														<div class="img">
+															<img src="/img/logotest.svg">
+														</div>
+														<div class="title">Категория 4</div>
+													</label>
+												</div>
+
+												
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<div class="list-model">
+												<nav>
+													<div class="title">
+														<span>Модели</span>
+													</div>
+													<ul class="list-row">
+														<li class="item active">Популярные</li>
+														<li class="item">Все</li>
+													</ul>
+												</nav>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -161,6 +256,7 @@
 	</div>
 	<script src="/libs/jquery/dist/jquery.min.js"></script>
 	<script src="/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="/js/filter.js"></script>
 	<script src="/js/script.js"></script>
 </body>
 </html>

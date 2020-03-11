@@ -18,4 +18,7 @@
   .detail-props .item {
     width: 100%; }
     .detail-props .item:nth-child(odd) {
-      margin-right: 0px; } }
+      margin-right: 0px; }
+  .files-add-list .item {
+    width: 80px;
+    height: 80px; } }

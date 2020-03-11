@@ -63,6 +63,19 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$(".filter_menu_r .list-cat").owlCarousel({
+		items: 4,
+		margin: 10,
+		lazyLoad: true,
+		mouseDrag: false,
+		touchDrag: false,
+    	navText : ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+    	nav: true,
+    	stagePadding: 3,
+		responsive: {
+		}
+	});
 	
 
 	
