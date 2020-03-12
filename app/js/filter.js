@@ -8,16 +8,22 @@
 
 		modelsContainer: $(".list-model"),
 		modelsTabs: $(".list-model .list-row"),
+		modelsItemsContainer: $(".list-model section.items"),
 
 	}
 
 
 	Filter.registerEventHandlers = function()
 	{
+
 		this.containers.modelsTabs.on("click", ".item", function(){
 			Filter.containers.modelsTabs.find(".item").removeClass("active")
 			$(this).addClass("active")
+
+			Filter.containers.modelsItemsContainer.slideToggle(0);
+			
 		})
+
 	}
 
 

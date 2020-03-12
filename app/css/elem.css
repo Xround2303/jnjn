@@ -268,7 +268,8 @@ button, .btn, .btn--v2, .btn--v3 {
     right: 5px;
     top: 5px; }
     .files-add-list .item .tag i {
-      font-size: 14px; }
+      font-size: 14px;
+      color: white; }
   .files-add-list .item::after {
     content: "";
     position: absolute;

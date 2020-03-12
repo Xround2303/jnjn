@@ -74,98 +74,140 @@ $(document).ready(function(){
     	nav: true,
     	stagePadding: 3,
 		responsive: {
+			320 : {
+				items: 1,
+				stagePadding: 0,
+			},
+			400 : {
+				items: 2,	
+			},
+			576 : {
+				items: 2,	
+			},
+			768 : {
+				items: 3,	
+			},
+			991 : {
+				items: 4,	
+			},
 		}
 	});
-	
-
-	
-	
-
-
 });
 
 
 
 App = {
 
-	// HEADER
-	headerTopMenuToogle: function()
-	{
-		// document.addEventListener("scroll", function(){
-		// 	if(window.pageYOffset >= 300)
-		// 	{
-		// 		if(window.pageYOffset >= 00)
-		// 		{
-		// 			$($("header .row")[0]).slideUp(50)
-		// 		}
-		// 	}
-		// 	else
-		// 	{
-		// 		$($("header .row")[0]).slideDown(50)
-		// 	}
-		// })
-	},
-	// HEADER END 
-
 
 	// DETAIL
-	detailSelectBigPhoto: function()
+	detailSetBitPhoto: function()
 	{
-		$(".detail-list-photo").on("click", ".item", function(e){
-
-		    $(".big-photo img")[0].src = $(this).find("img")[0].src;
-		    return false;
-		})
-
+	    $(".big-photo img")[0].src = $(this).find("img")[0].src;
+	    return false;
 	},
 	// DETAIL END
 
 
 
-	// ELEMETNS INPUTS
-	inputElemSite: function()
+	// FAVORITE
+	setFavorite: function()
 	{
-		$( ".input-range .input-in-out .min, .input-range .input-in-out .max" ).on('change', function(){
-											
+		$(this).toggleClass("active")
+		$(this).attr("data-product-id");
+	},
+	// FAVORITE END
 
-			let min = $( ".input-range .input-in-out .min").val() * 1;
-			let max = $( ".input-range .input-in-out .max").val() * 1;
 
-			if( min > max )
-			{
-				min = max;
-				$( ".input-range .input-in-out .min").val(min);
+	// PHOTO	
+	photo: {
+		add: function(e)
+		{
+			let reader = new FileReader();
+			// console.log(e.target);
+			
+			reader.onload = function (e) {
+
+				
+				let container = document.createElement("li");
+				let a = document.createElement("a")
+				let i = document.createElement("i")
+				let img = document.createElement("img")
+
+				$(container).addClass("item");
+
+				$(i).addClass("fas fa-times");
+
+				a.href = "javascript:void(0)";
+				$(a).addClass("tag delete");
+				a.append(i);
+
+				img.src = e.target.result;
+				img.alt = "";
+
+				container.append(a)
+				container.append(img);
+				
+				$(".files-add-list .list-row").append(container)	
 			}
 
-			if( min < 0 )
-			{
-				min = 0;
-				$( ".input-range .input-in-out .min").val(min);
-			}
+			reader.readAsDataURL(e.target.files[0]);
+		},
+		delete: function()
+		{
+			$(this).parent().remove();
+		}
+	},
+	// PHOTO END
 
-			if( max < min )
-			{
-				max = min;
-				$( ".input-range .input-in-out .max").val(max);
-			}
 
-	      	$( ".input-range .slider" ).slider( {"values": [min, max]} );
 
-	    })
+	// ELEMETNS INPUTS
+	inputRangeChange: function()
+	{
+									
+		let min = $( ".input-range .input-in-out .min").val() * 1;
+		let max = $( ".input-range .input-in-out .max").val() * 1;
+
+		if( min > max )
+		{
+			min = max;
+			$( ".input-range .input-in-out .min").val(min);
+		}
+
+		if( min < 0 )
+		{
+			min = 0;
+			$( ".input-range .input-in-out .min").val(min);
+		}
+
+		if( max < min )
+		{
+			max = min;
+			$( ".input-range .input-in-out .max").val(max);
+		}
+
+      	$( ".input-range .slider" ).slider( {"values": [min, max]} );
+
 	},
 	// ELEMETNS INPUTS
 
-	// initialization
+
+
+	initEventHandler: function()
+	{
+		$(".favorite").on('click', this.setFavorite);
+		$(".detail-list-photo").on("click", ".item", this.detailSetBitPhoto);
+		$(".input-range .min, .input-range .max").on('change', this.inputRangeChange);
+		$(".files-add-list .item").on('click', '.delete', this.photo.delete);
+		$(".files-add-list").on('click', '.item .delete', this.photo.delete);
+		$(".files-add-list input[type=file]").on('change', this.photo.add);
+	},
+
+
 	init: function()
 	{
-		// HEADER
-		this.headerTopMenuToogle();
 
-		// DETAIL
-		this.detailSelectBigPhoto();
-
-		// INPUTS
-		this.inputElemSite();
+		this.initEventHandler();
 
 	}
 
