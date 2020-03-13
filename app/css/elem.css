@@ -1,6 +1,17 @@
 .input-group {
   margin: 10px 0; }
 
+.input-group--row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
 input[type=text], input[type=number] {
   border: 1px solid #D8D8D8;
   -webkit-box-sizing: border-box;

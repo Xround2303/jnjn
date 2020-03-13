@@ -23,4 +23,6 @@
       margin-right: 0px; }
   .files-add-list .item {
     width: 80px;
-    height: 80px; } }
+    height: 80px; }
+  .auth .wrapper section {
+    padding: 50px 25px; } }
