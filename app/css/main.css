@@ -347,13 +347,14 @@ header .header-main-button .btn {
       font-size: 14px;
       padding: 10px; }
   .sdr-categories button i {
-    font-size: 14px;
+    font-size: 22px;
     color: #D8D8D8; }
     .sdr-categories button i:hover {
       color: #4BC0E4; }
   .sdr-categories .owl-prev, .sdr-categories .owl-next {
     top: -webkit-calc(50% - 35px);
-    top: calc(50% - 35px); }
+    top: calc(50% - 35px);
+    outline: none; }
   .sdr-categories .owl-prev {
     position: absolute;
     left: 0; }
@@ -403,14 +404,13 @@ header .header-main-button .btn {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
       pointer-events: none;
-      padding: 7px 0; }
+      padding: 7px 10px; }
       .adv-list .adv-item .adv-preview .nav-preview .item {
-        width: 30px;
+        width: 100%;
         height: 5px;
         background: white;
         opacity: .2;
@@ -509,7 +509,8 @@ header .header-main-button .btn {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
-              justify-content: space-between; }
+              justify-content: space-between;
+      padding: 0; }
       .adv-list .adv-item .adv-prop .props-list .prop-item {
         margin-right: 10px;
         display: -webkit-box;
@@ -524,7 +525,8 @@ header .header-main-button .btn {
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
-        color: #CFCFCF; }
+        color: #CFCFCF;
+        cursor: default; }
         .adv-list .adv-item .adv-prop .props-list .prop-item i {
           margin-right: 7px; }
         .adv-list .adv-item .adv-prop .props-list .prop-item span {
