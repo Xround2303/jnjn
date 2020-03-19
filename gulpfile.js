@@ -89,7 +89,7 @@ gulp.task('watch',['browser-sync', 'sass', 'css-libs', 'scripts'], function(){
 	// Первый аргумент - путь, в котором мы ищим изменяемые файлы
 	// Второй аргумент - в массиве перечесляем название тасков, которые будут выполняться
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch('app/**/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 	gulp.watch('app/img/**/*.svg', browserSync.reload);
 });
@@ -109,7 +109,7 @@ gulp.task('build',['clean', 'img', 'sass', 'scripts'], function(){
 	var buildJs = gulp.src('app/js/**/*')
 		.pipe(gulp.dest('dist/js'));
 
-	var buildHtml = gulp.src('app/*.html')
+	var buildHtml = gulp.src('app/**/*.html')
 		.pipe(gulp.dest('dist'));
 
 })

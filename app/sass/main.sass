@@ -118,10 +118,55 @@ header .menu-top
 					margin-right: 7px
 
 header .menu-burger
+	position: relative
 	.btn
 		width: 100%
 	.btn i
 		margin-right: 10px
+	&:hover
+		.dropmenu
+			display: block
+		.btn
+			color: #4BC0E4
+			border-color: #4BC0E4
+	.dropmenu.left
+		left: 95%
+		top: 0
+		margin-top: 0px
+	.dropmenu
+		display: none
+		position: absolute
+		left: 0
+		top: 100%
+		width: 250px
+		ul
+			padding: 10px 0px
+			background: white
+			width: 100%
+			list-style: none
+			border-radius: 2px 
+			box-shadow: 0px 0px 47px #e4e4e4
+
+			li
+				position: relative
+				a
+					width: 100%
+					display: block
+					padding: 8px 20px
+					font-size: 14px
+					display: flex
+					justify-content: space-between
+					align-items: center
+					
+				.dropmenu
+					display: none
+				&:hover
+					> .dropmenu
+						display: block
+
+
+
+
 
 header form
 	height: 100%
