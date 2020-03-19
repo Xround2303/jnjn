@@ -145,8 +145,10 @@ header .menu-burger {
     border-color: #4BC0E4; }
   header .menu-burger .dropmenu.left {
     left: 95%;
-    top: 0;
+    top: -30%;
     margin-top: 0px; }
+    header .menu-burger .dropmenu.left ul {
+      margin-top: 0px; }
   header .menu-burger .dropmenu {
     display: none;
     position: absolute;
@@ -154,6 +156,7 @@ header .menu-burger {
     top: 100%;
     width: 250px; }
     header .menu-burger .dropmenu ul {
+      margin-top: 5px;
       padding: 10px 0px;
       background: white;
       width: 100%;
