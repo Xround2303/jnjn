@@ -902,7 +902,7 @@ footer
 		h4
 			margin-bottom: 10px
 		ul
-			list-style: none;
+			list-style: none
 			
 			li
 				margin: 5px 0
@@ -935,6 +935,207 @@ footer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-card-row
+	.lc-wrapper
+		background: white
+		// border: 1px solid black
+		// min-height: 100px
+		box-shadow: 0 2px 20px 0 rgba(0,0,0,.1)
+		display: flex
+		border-radius: 3px
+		padding: 0 10px
+		margin-bottom: 20px
+		height: 140px
+		overflow: hidden
+	
+	.main
+		display: flex
+		margin-top: 10px
+		margin-bottom: 10px
+		font-size: 14px
+		color: #666
+		text-decoration: none
+		> *
+			margin-right: 20px
+		> *:last-child
+			margin-right: 0
+		.img
+			height: 120px
+			overflow: hidden
+			position: relative
+			// border: 1px solid black
+			border-radius: 3px 
+			flex: 2
+			display: flex
+			align-items: center
+			img
+				width: 100%
+			.tag-list
+				width: 100%
+				display: flex
+				position: absolute
+				justify-content: space-between
+				padding: 5px
+				top: 0
+				left: 0
+		.info
+			flex: 3
+			display: flex
+			justify-content: space-between
+			flex-direction: column
+			.title
+				font-size: 16px
+			.price
+				font-size: 16px
+				font-weight: bold
+			.date
+				font-size: 10px
+				color: #cfcfcf
+
+
+			
+
+
+	.desc
+		background: #F9F9F9
+		padding: 10px 35px
+		font-size: 14px
+		color: #666666
+		display: flex
+		align-items: center
+		
+			
+	
+	.btns
+		margin-top: 10px
+		margin-bottom: 10px
+		display: flex
+		flex-direction: row
+
+		.call
+			flex: auto
+			display: flex
+			flex-direction: column
+			justify-content: center
+			.btn
+				display: block
+				width: 100%
+				text-align: center
+				margin-bottom: 10px
+				padding: 10px
+				&:last-child
+					margin-bottom: 0
+		.func
+			width: 25px
+			padding: 0 10px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			overflow: hidden
+			align-items: center
+			margin-left: 10px
+			.btn				
+				display: flex
+				padding: 0
+				height: 25px
+				width: 25px
+				background: #F5F5F5
+				color: #666
+				border: none
+				margin-bottom: 5px
+				font-size: 14px
+
+				&:last-child
+					margin-bottom: 0
+				&:hover
+					color: white
+					background: #4BC0E4
+				> *
+					transition: all 0s
+
+
+
+.card-props
+	list-style: none
+	display: flex
+	.cp-item
+		margin-right: 10px
+		color: #cfcfcf
+		font-weight: bold
+		font-size: 12px
+		i
+			margin-right: 5px
+
+@media screen and (max-width: 768px)
+	.list-card-row .main .info .title
+		font-size: 16px
+	.list-card-row .main .info .price
+		font-size: 22px
+	.list-card-row .main .info
+		justify-content: flex-start
+		> *
+			margin-bottom: 10px
+	.list-card-row .main .info .date
+		font-size: 12px
+	.list-card-row .lc-wrapper
+		height: auto
+	.list-card-row .btns
+		margin-top: 0
+	.list-card-row .btns .call
+		order: 2
+		width: 100px
+		flex: 1 2 auto
+	.list-card-row .btns .call .btn
+		margin-bottom: 0
+		height: 100%
+		align-items: center
+		display: flex		
+	.list-card-row .btns .func
+		width: auto
+		flex-direction: row
+		justify-content: flex-start
+		margin-left: 0px
+		padding-left: 0px
+		.btn
+			width: 50px
+			height: 50px
+			margin-bottom: 0
+			margin-right: 10px
+			&:last-child
+				margin-right: 0
+@media screen and (max-width: 568px)
+	.list-card-row .main .img
+		height: 90px
+	.list-card-row .main .info .title
+		font-size: 12px
+		line-height: 100%
+	.list-card-row .main .info .price
+		font-size: 18px
+	.list-card-row .main .info > *
+		margin-bottom: 5px
+	.list-card-row .btns .func .btn
+		width: 35px
+		height: 35px
+	.list-card-row .btns .call .btn
+		font-size: 10px
+	.list-card-row .btns .call
+		width: auto
+	
 @import "elem.sass"
 @import "media.sass"
 
