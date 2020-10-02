@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Главная страница</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="libs/reset.css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/all.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="/libs/jquery-ui/themes/base/all.css">
+	<link rel="stylesheet" href="css/main.css">	
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<div class="app">
+
+		<!-- HEADER -->
+		<header class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="order-sm-first order-last col-sm-4 col-md-4 col-lg-2 col-xl-2">
+						<div class="logo">
+							<a href="/">
+								<img src="/img/logotest.svg">
+							</a>
+						</div>
+					</div>
+					<div class="col-6 order-first order-sm-last col-sm-3 col-md-3 col-lg-3 col-xl-3 location">
+							<a href="#" class="text">
+								<i class="fas fa-location-arrow"></i>
+								<span>Иркутск</span>
+							</a>
+					</div>
+					<div class="col-6 order-first order-sm-last col-sm-5 col-md-5 col-lg-7 col-xl-7 menu-top">
+						<ul>
+							<li class="d-none d-lg-inline-block d-md-inline-block d-xl-inline-block"><a href="#"><i class="fas fa-briefcase"></i><span>Партнерам</span></a></li>
+							<li><a href="/auth.html"><i class="far fa-user"></i><span>Войти</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
+						<div class="menu-burger">
+							<a href="#" class="btn">
+								<i class="fas fa-bars"></i><span class="d-none d-lg-block d-md-block d-xl-block">Все категории</span>
+							</a>
+							<div class="dropmenu">
+								<ul>
+									<li>
+										<a href="#"><span>Транспорт</span><i class="fas fa-chevron-right"></i></a>
+										<div class="dropmenu left">
+											<ul>
+												<li><a href="#"><span>Транспорт</span></a></li>
+												<li><a href="#"><span>Транспорт</span></a></li>
+												<li><a href="#"><span>Транспорт</span></a></li>
+												<li><a href="#"><span>Транспорт</span></a></li>
+												<li>
+													<a href="#"><span>Транспорт</span><i class="fas fa-chevron-right"></i></a>
+													<div class="dropmenu left">
+														<ul>
+															<li><a href="#"><span>Транспорт</span></a></li>
+															<li><a href="#"><span>Транспорт</span></a></li>
+															<li><a href="#"><span>Транспорт</span></a></li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li><a href="#"><span>Недвижимость</span></a></li>
+									<li><a href="#"><span>Грузоперевозки</span></a></li>
+									<li><a href="#"><span>Услуги</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-9 col-sm-5 col-md-4 col-lg-6 col-xl-7 search">
+						<form action="/">
+							<input type="text" placeholder="Поиск...">
+							<button><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+					<div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3 header-main-button">
+						<a href="/add.html" class="btn btn--v2">Добавить объявление</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
+		
+		<!-- BREADCROUMBS -->
+		<nav class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="breadcroumbs d-none d-sm-none d-md-block">
+						<ul>
+							<li><a href="/"><span>Главная</span></a></li>
+							<li><a href="/category.html"><span>Категория</span></a></li>
+							<li><a href="/detail.html"><span>Детальная страница</span></a></li>
+							<li><span>Название объявлен...</span></li>
+						</ul>
+					</div>
+					<h1>Заголовок страницы</h1>
+				</div>
+			</div>
+		</nav>
+		<!-- END BREADCROUMBS -->
+
+		<!-- CATEGORY LIST -->
+		<section class="container ">
+			<div class="row">
+				<div class="col-12"><h2>Категории</h2></div>
+			</div>
+			<div class="row">		
+				<div class="col-12">
+					<ul class="list-row sdr-categories owl-carousel">
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+						<li class="sdr-item item">
+							<a href="#" class="sdr-item-wrap">
+								<div class="preview">
+									<div class="img"><img src="/img/cat.jfif"></div>
+									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								</div>
+								<span class="title">Недвижимость</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- END CATEGORY LIST -->
+
+		<!-- LIST LAST ADVERTS -->
+		<section class="container">
+			<div class="row">
+				<div class="col-12"><h2>Последние объявления</h2></div>
+			</div>
+			<div class="row adv-list">
+
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+					<div class="item adv-item" data-product-id="123456">
+						<div class="adv-preview">
+							<div class="preview" data-photo-gallery="true">					
+								<a href="/detail.html"><img src="/img/cat.jfif"></a>
+							</div>
+							<div class="tag-list">
+								<div class="tag tag-location">Иркутск</div>
+								<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+									<i class="far fa-star"></i>
+									<i class="fas fa-star"></i>
+								</a>
+							</div>
+							<div class="nav-preview">
+								<div class="item active"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						</div>
+						<div class="adv-prop">
+							<div class="prop-info">
+								<div class="name"><a href="/detail.html">Продам в хорошем состояние без царапин и потертостей</a></div>
+								<div class="price">1 700 000 Руб</div>
+							</div>
+							<ul class="props-list d-none d-lg-flex d-xl-flex">
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>2007</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Авто</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>4wd</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Новая</span></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+					<div class="item adv-item" data-product-id="123456">
+						<div class="adv-preview">
+							<div class="preview" data-photo-gallery="true">					
+								<a href="/detail.html"><img src="/img/cat.jfif"></a>
+							</div>
+							<div class="tag-list">
+								<div class="tag tag-location">Иркутск</div>
+								<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+									<i class="far fa-star"></i>
+									<i class="fas fa-star"></i>
+								</a>
+							</div>
+							<div class="nav-preview">
+								<div class="item active"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						</div>
+						<div class="adv-prop">
+							<div class="prop-info">
+								<div class="name"><a href="/detail.html">Продам в хорошем состояние без царапин и потертостей</a></div>
+								<div class="price">1 700 000 Руб</div>
+							</div>
+							<ul class="props-list d-none d-lg-flex d-xl-flex">
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>2007</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Авто</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>4wd</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Новая</span></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+					<div class="item adv-item" data-product-id="123456">
+						<div class="adv-preview">
+							<div class="preview" data-photo-gallery="true">					
+								<a href="/detail.html"><img src="/img/cat.jfif"></a>
+							</div>
+							<div class="tag-list">
+								<div class="tag tag-location">Иркутск</div>
+								<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+									<i class="far fa-star"></i>
+									<i class="fas fa-star"></i>
+								</a>
+							</div>
+							<div class="nav-preview">
+								<div class="item active"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						</div>
+						<div class="adv-prop">
+							<div class="prop-info">
+								<div class="name"><a href="/detail.html">Продам в хорошем состояние без царапин и потертостей</a></div>
+								<div class="price">1 700 000 Руб</div>
+							</div>
+							<ul class="props-list d-none d-lg-flex d-xl-flex">
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>2007</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Авто</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>4wd</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Новая</span></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+					<div class="item adv-item" data-product-id="123456">
+						<div class="adv-preview">
+							<div class="preview" data-photo-gallery="true">					
+								<a href="/detail.html"><img src="/img/cat.jfif"></a>
+							</div>
+							<div class="tag-list">
+								<div class="tag tag-location">Иркутск</div>
+								<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+									<i class="far fa-star"></i>
+									<i class="fas fa-star"></i>
+								</a>
+							</div>
+							<div class="nav-preview">
+								<div class="item active"></div>
+								<div class="item"></div>
+								<div class="item"></div>
+							</div>
+						</div>
+						<div class="adv-prop">
+							<div class="prop-info">
+								<div class="name"><a href="/detail.html">Продам в хорошем состояние без царапин и потертостей</a></div>
+								<div class="price">1 700 000 Руб</div>
+							</div>
+							<ul class="props-list d-none d-lg-flex d-xl-flex">
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>2007</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Авто</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>4wd</span></li>
+								<li class="item prop-item"><i class="far fa-calendar-alt"></i><span>Новая</span></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				
+				<script>
+					var imgCollection = {
+						"123456" : {
+							"0" : "/img/detail-1.jpg",
+							"1" : "/img/detail-2.jpg",
+							"2" : "/img/detail-3.webp",
+						},
+						"1234567" : {
+							"0" : "/img/detail-1.jpg",
+							"1" : "/img/detail-3.webp",
+							"2" : "/img/detail-4.webp",
+							"3" : "/img/detail-5.webp",
+						}
+					}
+				</script>
+			</div>
+			<div class="row">
+				<div class="col-xl-12">
+					<div class="pagination">
+						<div class="list">
+							<a href="#"class="item"><i class="fas fa-angle-left"></i></a>
+							<a href="#"class="item">1</a>
+							<a href="#"class="item">2</a>
+							<a href="javascript:void(0)"class="item active">3</a>
+							<a href="#"class="item">4</a>
+							<a href="#"class="item">5</a>
+							<a href="#"class="item"><i class="fas fa-angle-right"></i></a>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</section>
+		<!-- END LIST LAST ADVERTS -->
+	
+		<!-- FOOTER -->
+		<footer class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="d-none d-sm-flex col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+						<div class="menu_b">			
+							<h4>Категории</h4>
+							<ul>
+								<li><a href="#">Недвижимость</a></li>
+								<li><a href="#">Транспорт</a></li>
+								<li><a href="#">Грузоперевозки</a></li>
+								<li><a href="#">Спецтехника</a></li>
+								<li><a href="#">Другое</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+						<div class="menu_b">			
+							<h4>Конфиденциальность</h4>
+							<ul>
+								<li><a href="#">Правовые документы</a></li>
+								<li><a href="#">Политика конфиденциальности </a></li>
+								<li><a href="#">Лицензия</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+						<div class="menu_b">			
+							<h4>О нас</h4>
+							<ul>
+								<li><a href="#">Как разместить объявление</a></li>
+								<li><a href="#">Правила работы </a></li>
+								<li><a href="#">Правила</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-4">
+						<div class="row">
+							<div class="col-xl-6 order-xl-last">
+								<div class="logo">
+									<a href="#">
+										<img src="/img/logotest.svg" alt="jnjn.ru">
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-6 order-xl-fist">
+								<div class="menu_social_b menu_b">			
+									<h4>Расскажи о нас</h4>
+									<ul class="list-row">
+										<li class="item vk"><a href="#"><i class="fab fa-vk"></i></a></li>
+										<li class="item ok"><a href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+										<li class="item tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END FOOTER -->
+
+	</div>
+	
+
+
+	<script src="/libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

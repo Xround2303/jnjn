@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Главная страница</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="libs/reset.css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/all.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="/libs/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">	
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+</head>
+	<body>
+		<div class="app">
+
+			<!-- HEADER -->
+		<header class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="order-sm-first order-last col-sm-4 col-md-4 col-lg-2 col-xl-2">
+						<div class="logo">
+							<a href="/">
+								<img src="/img/logotest.svg">
+							</a>
+						</div>
+					</div>
+					<div class="col-6 order-first order-sm-last col-sm-3 col-md-3 col-lg-3 col-xl-3 location">
+							<a href="#" class="text">
+								<i class="fas fa-location-arrow"></i>
+								<span>Иркутск</span>
+							</a>
+					</div>
+					<div class="col-6 order-first order-sm-last col-sm-5 col-md-5 col-lg-7 col-xl-7 menu-top">
+						<ul>
+							<li class="d-none d-lg-inline-block d-md-inline-block d-xl-inline-block"><a href="#"><i class="fas fa-briefcase"></i><span>Партнерам</span></a></li>
+							<li><a href="/auth.html"><i class="far fa-user"></i><span>Войти</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2 menu-burger">
+						<a href="#" class="btn">
+							<i class="fas fa-bars"></i><span class="d-none d-lg-block d-md-block d-xl-block">Все категории</span>
+						</a>
+					</div>
+					<div class="col-9 col-sm-5 col-md-4 col-lg-6 col-xl-7 search">
+						<form action="/">
+							<input type="text" placeholder="Поиск...">
+							<button><i class="fas fa-search"></i></button>
+						</form>
+					</div>
+					<div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3 header-main-button">
+						<a href="/add.html" class="btn btn--v2">Добавить объявление</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
+			
+			<!-- BREADCROUMBS -->
+			<nav class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="breadcroumbs d-none d-sm-none d-md-block">
+							<ul>
+								<li><a href="/"><span>Главная</span></a></li>
+								<li><a href="/category.html"><span>Категория</span></a></li>
+								<li><a href="/detail.html"><span>Детальная страница</span></a></li>
+								<li><span>Название объявлен...</span></li>
+							</ul>
+						</div>
+						<h1>Оформление элеметов форм</h1>
+					</div>
+				</div>
+			</nav>
+			<!-- END BREADCROUMBS -->
+			
+
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример оформления полей ввода строки</h2>
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="input-group">
+									<label for="input-1">Заголовок поля</label>
+									<input type="text"  id="input-1" placeholder="Подсказка">
+								</div>		
+							</div>
+							<div class="col-xl-3">
+								<div class="input-group">
+									<label for="input-2"><span class="require">*</span>Заголовок поля</label>
+									<input type="text"  id="input-2" placeholder="Подсказка">
+								</div>		
+							</div>
+							<div class="col-xl-4">
+								<div class="input-group">
+									<label for="input-3">Ошибочные данные</label>
+									<input type="text" class="error" id="input-3" placeholder="Подсказка">
+									<label for="input-3" class="error">Вы не заполнили обязательное поля формы</label>
+								</div>		
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример оформления текстового поля</h2>
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="input-group">
+									<label for="textarea-1">Заголовок поля</label>
+									<textarea placeholder="Подсказка" id="textarea-1"></textarea>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример оформления выпадающего списка</h2>
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="select-group">
+									<label for="select-1">Заголовок списка</label>
+									<div class="select">
+										<select id="select-1">
+											<option>Выбор 1</option>
+											<option>Выбор 2</option>
+											<option>Выбор 3</option>
+											<option>Выбор 4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример радиокнопок с зависимой и независимой фиксацией</h2>
+						<div class="row">
+							<div class="col-xl-3">
+								<label>Количество комнат</label>
+								<div class="check-group">
+									<div class="item-check">
+										<input type="checkbox" id="check-1">
+										<label for="check-1" class="checkbox"></label>
+										<label for="check-1">1</label>
+									</div>
+									<div class="item-check">
+										<input type="checkbox" id="check-2">
+										<label for="check-2" class="checkbox"></label>
+										<label for="check-2">2</label>
+									</div>
+									<div class="item-check">
+										<input type="checkbox" id="check-3">
+										<label for="check-3" class="checkbox"></label>
+										<label for="check-3">3</label>
+									</div>
+									<br>
+									<div class="item-check">
+										<input type="checkbox" id="check-4">
+										<label for="check-4" class="checkbox"></label>
+										<label for="check-4">4</label>
+									</div>
+									<div class="item-check">
+										<input type="checkbox" id="check-5">
+										<label for="check-5" class="checkbox"></label>
+										<label for="check-5">5</label>
+									</div>
+									<div class="item-check">
+										<input type="checkbox" id="check-6">
+										<label for="check-6" class="checkbox"></label>
+										<label for="check-6">6</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<label>Наличие дверей</label>
+								<div class="radio-group">
+									<div class="item-check item-check--block">
+										<input type="radio" name="radio" id="radio-1">
+										<label for="radio-1" class="radio-btn"></label>
+										<label for="radio-1">Да</label>
+									</div>
+									<div class="item-check item-check--block">
+										<input type="radio" name="radio" id="radio-2">
+										<label for="radio-2" class="radio-btn"></label>
+										<label for="radio-2">Нет</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример радиокнопок в виде кнопок</h2>
+						<div class="row">
+							<div class="col-xl-12">
+								<div class="btn-radio-group">
+									<div class="item-check">
+										<input type="radio" checked name="btn-radio" id="btn-radio-1">
+										<label for="btn-radio-1">Все</label>
+									</div>
+									<div class="item-check">
+										<input type="radio" name="btn-radio" id="btn-radio-2">
+										<label for="btn-radio-2">Продать</label>
+									</div>
+									<div class="item-check">
+										<input type="radio" name="btn-radio" id="btn-radio-3">
+										<label for="btn-radio-3">Сдать</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Пример оформления кнопок</h2>
+						<div class="row" style="padding-top: 10px">
+							<div class="col-xl-12">
+								<button>Кнопка 1</button>
+								<a href="#" class="btn">Кнопка ссылка</a>
+								<a href="#" class="btn">1</a>
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px">
+							<div class="col-xl-12">
+								<button class="btn--v2">Кнопка 1</button>
+								<a href="#" class="btn btn--v2">Кнопка ссылка</a>
+								<a href="#" class="btn btn--v2">1</a>
+							</div>
+						</div>
+						<div class="row" style="padding-top: 10px">
+							<div class="col-xl-12">
+								<button class="btn--v3">Кнопка 1</button>
+								<a href="#" class="btn btn--v3">Кнопка ссылка</a>
+								<a href="#" class="btn btn--v3">1</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h2>Другие поля ввода строки</h2>
+						<div class="row">
+							<div class="col-xl-3 col-12">
+								<label>Год выпуска <span>/ Год</span></label>
+								<div class="input-in-out">
+									<div class="input"><input type="number" value="1997">
+										<span class="left">от</span></div>
+									<div class="input"><input type="number" value="2007">
+										<span class="left">до</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="row" style="padding-top: 25px">
+							<div class="col-xl-3 col-12">
+								<label>Цена <span>/ Руб</span></label>
+								<div class="input-range">
+									<div class="slider"></div>
+									<div class="input-in-out">
+										<div class="input">
+											<input type="number" class="min" value="3000">
+											<span class="right">руб</span>
+										</div>
+										<div class="input">
+											<input type="number" class="max" value="7000">
+											<span class="right">руб</span>
+										</div>
+									</div>
+									<script>
+										$(document).ready(function(){
+											$( ".input-range .slider" ).slider({
+												range: true,
+												max: 10000,
+												min: 0,
+												step: 250,
+												values: [ 3000, 7000 ],
+												classes: {
+													"ui-slider": "fill",
+													"ui-slider-handle": "item",
+													"ui-slider-range": "range"
+										      	},
+
+												slide: function( event, ui ) {
+										        	$( ".input-range .input-in-out .min" ).val( ui.values[ 0 ] );
+										        	$( ".input-range .input-in-out .max" ).val( ui.values[ 1 ] );
+										      	},
+											});	
+										})
+									</script>
+								</div>
+								
+							</div>
+						</div>
+						<div class="row" style="padding-top: 25px">
+							<div class="col-xl-12">
+								<div class="files-add-list">
+									<ul class="list-row">
+										<li class="item">
+											<input type="file" id="file-1" class="d-none">
+											<label for="file-1"><i class="fas fa-plus"></i></label>
+										</li>
+										<li class="item">
+											<a href="#"><div class="tag"><i class="fas fa-times"></i></div></a>
+											<img src="/img/detail-2.jpg">
+										</li>
+										<li class="item">
+											<a href="#"><div class="tag"><i class="fas fa-times"></i></div></a>
+											<img src="/img/detail-1.jpg">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="row" style="padding-top: 25px">
+							<div class="col-xl-3 col-12">
+								<!-- Новый элемент -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			
+		
+
+
+
+
+
+
+
+
+
+
+			<!-- FOOTER -->
+			<footer class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="d-none d-sm-flex col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+							<div class="menu_b">			
+								<h4>Категории</h4>
+								<ul>
+									<li><a href="#">Недвижимость</a></li>
+									<li><a href="#">Транспорт</a></li>
+									<li><a href="#">Грузоперевозки</a></li>
+									<li><a href="#">Спецтехника</a></li>
+									<li><a href="#">Другое</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+							<div class="menu_b">			
+								<h4>Конфиденциальность</h4>
+								<ul>
+									<li><a href="#">Правовые документы</a></li>
+									<li><a href="#">Политика конфиденциальности </a></li>
+									<li><a href="#">Лицензия</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+							<div class="menu_b">			
+								<h4>О нас</h4>
+								<ul>
+									<li><a href="#">Как разместить объявление</a></li>
+									<li><a href="#">Правила работы </a></li>
+									<li><a href="#">Правила</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-4">
+							<div class="row">
+								<div class="col-xl-6 order-xl-last">
+									<div class="logo">
+										<a href="#">
+											<img src="/img/logotest.svg" alt="jnjn.ru">
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-6 order-xl-fist">
+									<div class="menu_social_b menu_b">			
+										<h4>Расскажи о нас</h4>
+										<ul class="list-row">
+											<li class="item vk"><a href="#"><i class="fab fa-vk"></i></a></li>
+											<li class="item ok"><a href="#"><i class="fab fa-odnoklassniki"></i></a></li>
+											<li class="item tw"><a href="#"><i class="fab fa-twitter"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- END FOOTER -->
+		</div>
+		
+
+	<script src="/libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
+
+
+	</body>
+</html>

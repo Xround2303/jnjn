@@ -13,13 +13,12 @@ var gulp 			= require('gulp'),
 	includer        = require("gulp-x-includer");
 
 
-/*gulp.task("include", function(){
-	console.log(111);
-    return gulp.src(["app/*.html"])
-    		.pipe(includer())
-    		.pipe(gulp.dest("app/build/"));
-
-});*/
+gulp.task("include", function(){
+    return gulp.src(["app/template/**/*.html"])
+	.pipe(includer())
+	.pipe(gulp.dest("app"))
+	.pipe(browserSync.reload({stream: true}));
+});
 
 
 
@@ -101,6 +100,7 @@ gulp.task('watch',['browser-sync', 'include', 'sass', 'css-libs', 'scripts'], fu
 	// Первый аргумент - путь, в котором мы ищим изменяемые файлы
 	// Второй аргумент - в массиве перечесляем название тасков, которые будут выполняться
 	gulp.watch('app/sass/**/*.sass', ['sass']);
+	gulp.watch('app/template/**/*.html', ['include']);
 	gulp.watch('app/**/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 	gulp.watch('app/img/**/*.svg', browserSync.reload);
