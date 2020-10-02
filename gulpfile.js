@@ -14,7 +14,7 @@ var gulp 			= require('gulp'),
 
 
 gulp.task("include", function(){
-    return gulp.src(["app/template/**/*.html"])
+    return gulp.src(["app/template/*.html"])
 	.pipe(includer())
 	.pipe(gulp.dest("app"))
 	.pipe(browserSync.reload({stream: true}));
