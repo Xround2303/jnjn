@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="libs/font-awesome/css/all.css">
 	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.default.min.css">
-	<link rel="stylesheet" type="text/css" href="/libs/jquery-ui/themes/base/all.css">
+	<link rel="stylesheet" type="text/css" href="/libs/jquery-ui/jquery-ui.css">
 	<link rel="stylesheet" href="css/main.css">	
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 </head>
@@ -42,40 +42,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2">
-						<div class="menu-burger">
-							<a href="#" class="btn">
-								<i class="fas fa-bars"></i><span class="d-none d-lg-block d-md-block d-xl-block">Все категории</span>
-							</a>
-							<div class="dropmenu">
-								<ul>
-									<li>
-										<a href="#"><span>Транспорт</span><i class="fas fa-chevron-right"></i></a>
-										<div class="dropmenu left">
-											<ul>
-												<li><a href="#"><span>Транспорт</span></a></li>
-												<li><a href="#"><span>Транспорт</span></a></li>
-												<li><a href="#"><span>Транспорт</span></a></li>
-												<li><a href="#"><span>Транспорт</span></a></li>
-												<li>
-													<a href="#"><span>Транспорт</span><i class="fas fa-chevron-right"></i></a>
-													<div class="dropmenu left">
-														<ul>
-															<li><a href="#"><span>Транспорт</span></a></li>
-															<li><a href="#"><span>Транспорт</span></a></li>
-															<li><a href="#"><span>Транспорт</span></a></li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li><a href="#"><span>Недвижимость</span></a></li>
-									<li><a href="#"><span>Грузоперевозки</span></a></li>
-									<li><a href="#"><span>Услуги</span></a></li>
-								</ul>
-							</div>
-						</div>
+					<div class="col-3 col-sm-2 col-md-4 col-lg-3 col-xl-2 menu-burger">
+						<a href="#" class="btn">
+							<i class="fas fa-bars"></i><span class="d-none d-lg-block d-md-block d-xl-block">Все категории</span>
+						</a>
 					</div>
 					<div class="col-9 col-sm-5 col-md-4 col-lg-6 col-xl-7 search">
 						<form action="/">
@@ -108,84 +78,331 @@
 			</div>
 		</nav>
 		<!-- END BREADCROUMBS -->
+		
 
-		<!-- CATEGORY LIST -->
-		<section class="container ">
-			<div class="row">
-				<div class="col-12"><h2>Категории</h2></div>
-			</div>
-			<div class="row">		
-				<div class="col-12">
-					<ul class="list-row sdr-categories owl-carousel">
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+		<!-- FILTER -->
+		<div class="container">
+			<div class="filter_c">
+				<div class="row">
+					<div class="col-12 col-lg-3 col-xl-3">
+						<div class="filter_menu_l line-v">
+							<ul>
+								<li><a href="#">Транспорт</a></li>
+								<li class="active"><a href="#">Недвижимость</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Грузоперевозки</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-lg-8 col-xl-8">
+						<form  action="/"  class="filter_menu_r">
+							<div class="row">
+								<div class="col-12">
+									<div class="btn-radio-group">
+										<div class="item-check">
+											<input type="radio" checked name="btn-radio" id="btn-radio-1">
+											<label for="btn-radio-1">Все</label>
+										</div>
+										<div class="item-check">
+											<input type="radio" name="btn-radio" id="btn-radio-2">
+											<label for="btn-radio-2">Продать</label>
+										</div>
+										<div class="item-check">
+											<input type="radio" name="btn-radio" id="btn-radio-3">
+											<label for="btn-radio-3">Сдать</label>
+										</div>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="list-cat owl-carousel">
+										<div class="item">
+											<input type="radio" id="cat-1" name="cat">
+											<label for="cat-1">
+												<div class="img">
+													<img src="/img/logotest.svg">
+												</div>
+												<div class="title">Категория 1</div>
+											</label>
+										</div>
+										<div class="item">
+											<input type="radio" id="cat-2" name="cat">
+											<label for="cat-2">
+												<div class="img">
+													<img src="/img/logotest.svg">
+												</div>
+												<div class="title">Категория 2</div>
+											</label>
+										</div>
+
+										<div class="item">
+											<input type="radio" id="cat-5" name="cat">
+											<label for="cat-5">
+												<div class="img">
+													<img src="/img/logotest.svg">
+												</div>
+												<div class="title">Категория 5</div>
+											</label>
+										</div>
+										<div class="item">
+											<input type="radio" id="cat-3" name="cat">
+											<label for="cat-3">
+												<div class="img">
+													<img src="/img/logotest.svg">
+												</div>
+												<div class="title">Категория 3</div>
+											</label>
+										</div>
+										<div class="item">
+											<input type="radio" id="cat-4" name="cat">
+											<label for="cat-4">
+												<div class="img">
+													<img src="/img/logotest.svg">
+												</div>
+												<div class="title">Категория 4</div>
+											</label>
+										</div>
+
+										
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+							</div>
+							<div class="row" style="margin-top: 30px">
+								<div class="col-12">
+									<div class="list-model">
+										<nav>
+											<div class="title">
+												<span>Модели</span>
+											</div>
+											<ul class="list-row">
+												<li data-tab="model-pop" class="item active">Популярные</li>
+												<li data-tab="model-all" class="item">Все</li>
+											</ul>
+										</nav>
+
+										<section class="items" id="model-pop">
+											<div class="row">
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes<span>234</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>2</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>32</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Benz<span>234</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mazda<span>21</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Track<span>144</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>234</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>23</span>
+													</a>
+												</div>
+
+												<div class="col-12 col-sm-4 col-xl-3 ">
+													<a href="#" class="item">
+														Mercedes-Benz<span>23</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>23</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>23</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Mercedes-Benz<span>23</span>
+													</a>
+												</div>
+
+											</div>
+										</section>
+
+										<section class="items" id="model-all" style="display: none;">
+											<div class="row">
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Aaaaaa<span>234</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Baaaaa<span>2</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Caaaaa<span>3</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Daaaaa<span>234</span>
+													</a>
+												</div>
+												<div class="col-12 col-sm-4 col-xl-3">
+													<a href="#" class="item">
+														Faaaa<span>21</span>
+													</a>
+												</div>
+											</div>
+										</section>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+							</div>
+							<div class="row" style="margin-top: 30px">
+								<div class="col-12 col-sm-6 col-xl-4">
+									<div class="select-group">
+										<label for="select-1">Коробка передач</label>
+										<div class="select">
+											<select id="select-1">
+												<option>Автомат</option>
+												<option>Ручная</option>
+											</select>
+										</div>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								<div class="col-12 col-sm-6 col-xl-4">
+									<div class="select-group">
+										<label for="select-2">Коробка передач</label>
+										<div class="select">
+											<select id="select-2">
+												<option>Автомат</option>
+												<option>Ручная</option>
+											</select>
+										</div>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								<div class="col-12 col-sm-6 col-xl-4">
+									<div class="select-group">
+										<label>Год выпуска <span>/ Год</span></label>
+										<div class="input-in-out">
+											<div class="input"><input type="number" value="1997">
+												<span class="left">от</span></div>
+											<div class="input"><input type="number" value="2007">
+												<span class="left">до</span></div>
+										</div>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-						<li class="sdr-item item">
-							<a href="#" class="sdr-item-wrap">
-								<div class="preview">
-									<div class="img"><img src="/img/cat.jfif"></div>
-									<span class="tag"><i class="fas fa-bullhorn"></i><span>123</span></span>
+								<div class="col-12 col-sm-6 col-xl-4">
+									<div class="select-group">
+										<label>Количество дверей</label>
+										<div class="check-group">
+											<div class="item-check">
+												<input type="checkbox" id="check-1">
+												<label for="check-1" class="checkbox"></label>
+												<label for="check-1">1</label>
+											</div>
+											<div class="item-check">
+												<input type="checkbox" id="check-2">
+												<label for="check-2" class="checkbox"></label>
+												<label for="check-2">2</label>
+											</div>
+											<div class="item-check">
+												<input type="checkbox" id="check-3">
+												<label for="check-3" class="checkbox"></label>
+												<label for="check-3">3</label>
+											</div>
+											<div class="item-check">
+												<input type="checkbox" id="check-4">
+												<label for="check-4" class="checkbox"></label>
+												<label for="check-4">4</label>
+											</div>
+											<div class="item-check">
+												<input type="checkbox" id="check-5">
+												<label for="check-5" class="checkbox"></label>
+												<label for="check-5">5</label>
+											</div>
+											<div class="item-check">
+												<input type="checkbox" id="check-6">
+												<label for="check-6" class="checkbox"></label>
+												<label for="check-6">6</label>
+											</div>
+										</div>
+									</div>
 								</div>
-								<span class="title">Недвижимость</span>
-							</a>
-						</li>
-					</ul>
+								<div class="col-12 col-sm-6 col-xl-4">
+									<div class="select-group">
+										<label>Цена <span>/ Руб</span></label>
+										<div class="input-range">
+											<div class="slider"></div>
+											<div class="input-in-out">
+												<div class="input">
+													<input type="number" class="min" value="3000">
+													<span class="right">руб</span>
+												</div>
+												<div class="input">
+													<input type="number" class="max" value="7000">
+													<span class="right">руб</span>
+												</div>
+											</div>
+											<script>
+												$(document).ready(function(){
+													$( ".input-range .slider" ).slider({
+														range: true,
+														max: 10000,
+														min: 0,
+														step: 250,
+														values: [ 3000, 7000 ],
+														classes: {
+															"ui-slider": "fill",
+															"ui-slider-handle": "item",
+															"ui-slider-range": "range"
+												      	},
+
+														slide: function( event, ui ) {
+												        	$( ".input-range .input-in-out .min" ).val( ui.values[ 0 ] );
+												        	$( ".input-range .input-in-out .max" ).val( ui.values[ 1 ] );
+												      	},
+													});	
+												})
+											</script>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row" style="margin-top: 30px">
+								<div class="col-12 col-xl-4">
+									<input type="submit" class="btn btn--v2" value="Показать объявления">
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
-			</div>
-		</section>
-		<!-- END CATEGORY LIST -->
-
+			</div>		
+		</div>
+		<!-- END FILTER -->
+		
 		<!-- LIST LAST ADVERTS -->
 		<section class="container">
 			<div class="row">
@@ -363,7 +580,7 @@
 			</div>
 		</section>
 		<!-- END LIST LAST ADVERTS -->
-	
+
 		<!-- FOOTER -->
 		<footer class="container-fluid">
 			<div class="container">
@@ -425,13 +642,12 @@
 			</div>
 		</footer>
 		<!-- END FOOTER -->
-
 	</div>
 	
-
-
+	
 	<script src="/libs/jquery-ui/jquery-ui.min.js"></script>
 	<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="/js/filter.js"></script>
+	<script src="/js/script.js"></script>
 </body>
 </html>

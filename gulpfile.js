@@ -10,6 +10,18 @@ var gulp 			= require('gulp'),
 	pngquant    	= require('imagemin-pngquant');
 	cache       	= require('gulp-cache');
 	autoprefixer	= require('gulp-autoprefixer');
+	includer        = require("gulp-x-includer");
+
+
+/*gulp.task("include", function(){
+	console.log(111);
+    return gulp.src(["app/*.html"])
+    		.pipe(includer())
+    		.pipe(gulp.dest("app/build/"));
+
+});*/
+
+
 
 
 // Переводим sass в css
@@ -85,7 +97,7 @@ gulp.task('img', function(){
 
 // Смотрим обновленные файлы
 	// Второй аргумент, запускаются таски до таска watch
-gulp.task('watch',['browser-sync', 'sass', 'css-libs', 'scripts'], function(){
+gulp.task('watch',['browser-sync', 'include', 'sass', 'css-libs', 'scripts'], function(){
 	// Первый аргумент - путь, в котором мы ищим изменяемые файлы
 	// Второй аргумент - в массиве перечесляем название тасков, которые будут выполняться
 	gulp.watch('app/sass/**/*.sass', ['sass']);

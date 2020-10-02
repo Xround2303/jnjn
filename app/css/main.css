@@ -244,7 +244,6 @@ header .search {
         -ms-flex-align: center;
             align-items: center;
     top: 0;
-    left: -webkit-calc(100% - 60px);
     left: calc(100% - 60px);
     position: absolute;
     height: 100%;
@@ -403,7 +402,6 @@ header .header-main-button .btn {
     .sdr-categories button i:hover {
       color: #4BC0E4; }
   .sdr-categories .owl-prev, .sdr-categories .owl-next {
-    top: -webkit-calc(50% - 35px);
     top: calc(50% - 35px);
     outline: none; }
   .sdr-categories .owl-prev {
@@ -704,13 +702,11 @@ header .header-main-button .btn {
     .detail .column-l .content .detail-list-photo .owl-nav .owl-prev {
       position: absolute;
       left: 0;
-      top: -webkit-calc(50% - 15px);
       top: calc(50% - 15px);
       font-size: 18px; }
     .detail .column-l .content .detail-list-photo .owl-nav .owl-next {
       position: absolute;
       right: 0;
-      top: -webkit-calc(50% - 15px);
       top: calc(50% - 15px);
       font-size: 18px; }
     .detail .column-l .content .detail-list-photo .owl-nav:hover button {
@@ -853,7 +849,6 @@ header .header-main-button .btn {
       -ms-flex-direction: row;
           flex-direction: row; }
   .detail-props-list .item {
-    width: -webkit-calc(50% - 30px);
     width: calc(50% - 30px);
     display: -webkit-box;
     display: -webkit-flex;
@@ -980,7 +975,6 @@ header .header-main-button .btn {
               border-radius: 2px;
       background: #F9F9F9;
       color: #D8D8D8;
-      top: -webkit-calc(50% - 35px);
       top: calc(50% - 35px);
       font-size: 18px;
       position: absolute; }
