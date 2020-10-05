@@ -1,17 +1,76 @@
 #jnjnmap {
-  height: 600px;
+  height: 700px;
   width: 100%;
   background: #f2f2f2;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #jnjnmap .ymap {
-    background: #999;
+    background: #f2f2f2;
     height: 100%;
     width: 100%;
     display: block; }
   #jnjnmap .filter {
     position: absolute;
-    width: 300px;
+    width: 500px;
     background: white;
-    height: 300px;
-    bottom: 0;
-    left: 20%; }
+    min-height: 50px;
+    max-height: 620px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    left: 5%;
+    bottom: 5%;
+    overflow: hidden;
+    padding: 0px 20px;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); }
+    #jnjnmap .filter > .filter-cnt {
+      margin-top: 15px;
+      margin-bottom: 35px; }
+    #jnjnmap .filter .filter-cnt {
+      overflow-y: scroll;
+      padding: 0px 20px 10px 0px;
+      -webkit-transition: all .1s linear;
+      -o-transition: all .1s linear;
+      transition: all .1s linear;
+      display: block;
+      height: 0; }
+      #jnjnmap .filter .filter-cnt .item {
+        background: #f2f2f2;
+        padding: 10px;
+        margin-bottom: 5px; }
+        #jnjnmap .filter .filter-cnt .item:last-of-type {
+          background: red;
+          margin-bottom: 0; }
+    #jnjnmap .filter .filter-head {
+      padding: 15px 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      cursor: pointer; }
+      #jnjnmap .filter .filter-head .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #666; }
+      #jnjnmap .filter .filter-head i {
+        font-size: 18px;
+        color: #B9E5F3; }
+  #jnjnmap .filter.active .filter-cnt {
+    height: 500px; }
+  #jnjnmap .filter.active .filter-head i {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }

@@ -1,17 +1,64 @@
 #jnjnmap
-	height: 600px
+	height: 700px
 	width: 100%
 	background: #f2f2f2
 	position: relative
+	overflow: hidden
 	.ymap
-		background: #999
+		background: #f2f2f2
 		height: 100%
 		width: 100%
 		display: block
+
 	.filter
 		position: absolute
-		width: 300px
+		width: 500px
 		background: white
-		height: 300px
-		bottom: 0
-		left: 20%
+		min-height: 50px
+		max-height: 620px
+		border-radius: 3px
+		left: 5%
+		bottom: 5%
+		overflow: hidden
+		padding: 0px 20px
+		box-shadow: 0 3px 8px rgba(0, 0, 0, .25)
+		> .filter-cnt
+			margin-top: 15px
+			margin-bottom: 35px
+		.filter-cnt
+			overflow-y: scroll
+			// height: 500px
+			padding: 0px 20px 10px 0px
+			transition: all .1s linear
+			display: block
+			height: 0
+			.item
+				background: #f2f2f2
+				padding: 10px
+				margin-bottom: 5px
+				&:last-of-type
+					background: red
+					margin-bottom: 0
+	
+		.filter-head
+			padding: 15px 0
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			align-items: center
+			cursor: pointer
+			.title
+				font-size: 18px
+				font-weight: bold
+				color: #666
+			i
+				font-size: 18px
+				color: #B9E5F3
+
+
+	.filter.active
+		.filter-cnt
+			// display: block
+			height: 500px
+		.filter-head i
+			transform: rotate(180deg);			

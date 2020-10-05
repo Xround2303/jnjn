@@ -14,7 +14,7 @@ var gulp 			= require('gulp'),
 
 
 gulp.task("include", function(){
-    return gulp.src(["app/template/*.html"])
+    return gulp.src(["app/src/*.html"])
 	.pipe(includer())
 	.pipe(gulp.dest("app"))
 	.pipe(browserSync.reload({stream: true}));
@@ -100,7 +100,7 @@ gulp.task('watch',['browser-sync', 'include', 'sass', 'css-libs', 'scripts'], fu
 	// Первый аргумент - путь, в котором мы ищим изменяемые файлы
 	// Второй аргумент - в массиве перечесляем название тасков, которые будут выполняться
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch('app/template/**/*.html', ['include']);
+	gulp.watch('app/src/**/*.html', ['include']);
 	gulp.watch('app/**/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 	gulp.watch('app/img/**/*.svg', browserSync.reload);
