@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});*/
 
-	$('.scrollbar-inner').scrollbar({
-        "showArrows": true,
-        "scrolly": "advanced"
-    });
+	$('.scrollbar-inner').scrollbar({ autoScrollSize: false });
 
-	document.querySelector(".filter-head").addEventListener("click", function(e){
+	document.querySelector(".map-filter .filter-head").addEventListener("click", function(e){
 		e.preventDefault();
-		document.querySelector(".filter").classList.toggle("active");
+		let parent = e.target.closest(".filter");
+		parent.classList.toggle("active");
+		// parent.querySelector(".filter-cnt").addEventListener("transitionend", )
+		return false;
 	});
 
 
