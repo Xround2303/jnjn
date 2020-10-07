@@ -411,6 +411,33 @@ header .header-main-button .btn {
     position: absolute;
     right: 0; }
 
+.tag-list {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .tag-list .tag {
+    position: relative;
+    color: white;
+    text-decoration: none; }
+    .tag-list .tag .fas.fa-star {
+      display: none; }
+
+.tag.active .far.fa-star {
+  display: none; }
+
+.tag.active .fas.fa-star {
+  display: block; }
+
 .adv-list .adv-item {
   -webkit-border-radius: 2px;
           border-radius: 2px;
@@ -470,30 +497,6 @@ header .header-main-button .btn {
           margin-right: 0; }
       .adv-list .adv-item .adv-preview .nav-preview .active {
         opacity: .5; }
-    .adv-list .adv-item .adv-preview .tag-list {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      padding: 10px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100%;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .adv-list .adv-item .adv-preview .tag-list .tag {
-        position: relative;
-        color: white;
-        text-decoration: none; }
-        .adv-list .adv-item .adv-preview .tag-list .tag .fas.fa-star {
-          display: none; }
-    .adv-list .adv-item .adv-preview .tag.active .far.fa-star {
-      display: none; }
-    .adv-list .adv-item .adv-preview .tag.active .fas.fa-star {
-      display: block; }
     .adv-list .adv-item .adv-preview .preview {
       height: 150px;
       overflow: hidden;

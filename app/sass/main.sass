@@ -333,6 +333,26 @@ header .header-main-button
 		position: absolute
 		right: 0		
 
+.tag-list
+	position: absolute
+	top: 0px
+	left: 0px
+	padding: 10px
+	display: flex
+	width: 100%
+	justify-content: space-between
+	.tag
+		position: relative
+		color: white
+		text-decoration: none
+		.fas.fa-star
+			display: none
+.tag.active
+	.far.fa-star
+		display: none
+	.fas.fa-star
+		display: block
+		
 .adv-list
 	.adv-item
 		border-radius: 2px
@@ -372,25 +392,7 @@ header .header-main-button
 						margin-right: 0
 				.active
 					opacity: .5
-			.tag-list
-				position: absolute
-				top: 0px
-				left: 0px
-				padding: 10px
-				display: flex
-				width: 100%
-				justify-content: space-between
-				.tag
-					position: relative
-					color: white
-					text-decoration: none
-					.fas.fa-star
-						display: none
-			.tag.active
-				.far.fa-star
-					display: none
-				.fas.fa-star
-					display: block
+
 
 
 			.preview

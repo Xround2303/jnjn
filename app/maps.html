@@ -110,34 +110,160 @@
 		</nav>
 		<!-- END BREADCROUMBS -->
 <link rel="stylesheet" href="css/maps.css">
-<link rel="stylesheet" href="libs/jquery.scrollbar/jquery.scrollbar.css">
-<link rel="stylesheet" href="css/scrollbar.theme.css">
+<link rel="stylesheet" href="libs/OverlayScrollbars/css/OverlayScrollbars.css">
+<link rel="stylesheet" href="css/OverlayScrollbars.theme.css">
 
 <div id="jnjnmap">
 	<div class="ymap" id="map"></div>
 	<div class="filter-wrp">
-		<div class="filter map-filter">
+		<div class="filter map-filter ">
 				<div class="filter-head">
 					<div class="title">Фильтр</div>
 					<i class="fas fa-angle-up"></i>
 				</div>
 				<div class="filter-cnt-wrp">
 					<div class="filter-cnt scrollbar-inner">
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
+						<div class="fl-item-fill">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item-fill">
+							<div class="btn-radio-group">
+							<div class="item-check">
+								<input type="radio" checked="" name="btn-radio" id="btn-radio-1">
+								<label for="btn-radio-1">Все</label>
+							</div>
+							<div class="item-check">
+								<input type="radio" name="btn-radio" id="btn-radio-2">
+								<label for="btn-radio-2">Продать</label>
+							</div>
+							<div class="item-check">
+								<input type="radio" name="btn-radio" id="btn-radio-3">
+								<label for="btn-radio-3">Сдать</label>
+							</div>
+						</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item-fill">
+							<div class="check-group">
+									<div class="item-check">
+										<input type="checkbox" id="check-1">
+										<label for="check-1" class="checkbox"></label>
+										<label for="check-1">Показывать только с фото</label>
+									</div>
+								</div>
+						</div>
 					</div>					
 				</div>
 
@@ -149,21 +275,313 @@
 				</div>
 				<div class="filter-cnt-wrp">
 					<div class="filter-cnt scrollbar-inner">
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
+						
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						<div class="fl-item">
+	<div class="fl-product" data-product-id="123456">
+		<div class="row-top">
+			<div class="preview" data-photo-gallery="true">					
+				<a href="/detail.html">
+					<!-- <img src="/img/cat.jfif"> -->
+				</a>
+			</div>
+			<div class="nav-preview">
+				<div class="item active"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+			<div class="tag-list">
+				<div class="tag tag-location">124 700 000</div>
+				<a href="javascript:void(0)" class="tag favorite tag-favorite active">
+					<i class="far fa-star"></i>
+					<i class="fas fa-star"></i>
+				</a>
+			</div>
+		</div>
+		<div class="row-bottom">
+			<a href="#">5-к квартира, 262.3 м², 9/10 эт.</a>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function(){
+		App.imgCollectionPush(123456, {
+			// "0" : "/img/detail-1.jpg",
+			// "1" : "/img/detail-2.jpg",
+			"0" : "/img/detail-3.webp",
+			"1" : "/img/detail-3.webp",
+			"2" : "/img/detail-3.webp"
+		})
+		
+	});
+</script>
+						
+						<div class="item-empty" style="display: none;">По указанному фильтру нет доступных для просмотра объявлений</div>
 					</div>					
 				</div>	
 		</div>
@@ -171,7 +589,7 @@
 	
 </div>
 
-<script src="libs/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="libs/OverlayScrollbars/js/OverlayScrollbars.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f71d7cfe-8faf-4f12-9ea4-d76ea6c43251"></script>
 <script src="js/maps.js"></script>
 

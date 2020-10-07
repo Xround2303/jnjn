@@ -12,19 +12,22 @@
 		position: absolute
 	.filter-wrp
 		position: relative
+		overflow: hidden
 		left: 5%
 		top: 5%
 		height: 620px
 		width: 500px
 		z-index: 2
+		box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15)
 	.filter.filter.map-items
 		z-index: 11
-		box-shadow: 0 3px 8px rgba(0, 0, 0, .25)
+		// box-shadow: 0 3px 8px rgba(0, 0, 0, .05)
+		left: 0
+		top: 0
 		> .filter-cnt-wrp
 			height: 560px
 			> .filter-cnt
-				height: calc(100% - 90px);
-			
+				height: calc(100% - 90px);			
 	.filter.map-filter
 		z-index: 12
 		box-shadow: 0px -2px 22px 0px rgba(0,0,0,0.05)
@@ -37,24 +40,85 @@
 		background: white
 		border-radius: 3px
 		overflow: hidden
-		padding: 0px 20px	
+		padding: 0px 20px
+		width: 100%
 		.filter-cnt-wrp
 			height: 0
 			transition: all .1s linear
 		.filter-cnt
-			overflow-y: scroll
-			padding: 0px 20px 0px 0px
+			padding-right: 20px
 			display: block
-			height: calc(100% - 35px)
-			// padding-bottom: 35px
-			.item
-				background: #f2f2f2
-				padding: 10px
+			height: calc(100% - 35px)			
+			.item-empty
+				padding: 20px
+				text-align: center
+				border-radius: 3px
+				font-size: 14px
+				color: #C6C6C6
+				height: 100%
+				display: flex
+				align-items: center
+			.fl-item
 				margin-bottom: 5px
+				width: calc(50% - 7px)
+				display: inline-block
 				&:last-of-type
-					background: red
 					margin-bottom: 0
-	
+				&:nth-of-type(2n)
+					margin-left: 10px
+			.fl-item-fill
+				margin-bottom: 5px
+				width: 100%
+		.fl-product
+			display: flex
+			flex-direction: column
+			background: #F9F9F9
+			.row-top
+				height: 120px
+				background: #c9c9c9
+				overflow: hidden
+				position: relative
+				width: 100%
+				.preview
+					height: 100%
+					overflow: hidden
+					width: 100%
+					a
+						height: 100%
+						width: 100%
+						display: flex
+						justify-content: center
+					img						
+						height: 100%
+				.nav-preview
+					position: absolute
+					left: 0
+					bottom: 0
+					width: 100%
+					display: flex
+					justify-content: space-around
+					pointer-events: none
+					padding: 7px 10px
+					.item
+						width: 100%
+						height: 5px
+						background: white
+						opacity: .3
+						border-radius: 30px
+						margin-right: 5px
+						&:last-of-type
+							margin-right: 0
+					.active
+						opacity: .5
+			.row-bottom
+				min-height: 60px
+				max-height: 100px
+				overflow: hidden
+				padding: 10px
+				font-weight: 500
+				font-size: 14px
+				a
+					color: #666
 		.filter-head
 			padding: 25px 0
 			display: flex
@@ -68,11 +132,13 @@
 			i
 				font-size: 18px
 				color: #B9E5F3
+				pointer-events: none;
 
-
+			&:hover i
+				color: #4bc0e4
 	.filter.active
 		.filter-cnt-wrp
 			// display: block
-			height: 500px
+			height: 490px
 		.filter-head i
-			transform: rotate(180deg);			
+			transform: rotate(180deg);

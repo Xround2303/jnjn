@@ -1,11 +1,10 @@
-$(document).ready(function(){
-	
-});
+
 
 
 
 App = {
 
+	imgCollection: [],
 
 	// DETAIL
 	detailSetBitPhoto: function()
@@ -102,19 +101,30 @@ App = {
 	cardGalleryPreview: function(e)
 	{
 
-		if(typeof imgCollection != "undefined")
+	
+		if(typeof App.imgCollection != "undefined")
 		{
+
 			container = $(e.target).parents(".preview")[0];
+
 			nav = $(e.target).parents(".adv-item").find(".nav-preview .item");
+			
+			if(!nav[0])
+			{
+				nav = $(e.target).parents(".fl-product").find(".nav-preview .item");
+			}
 
-			id = $(e.target).parents(".adv-item").attr("data-product-id");
-			collection = imgCollection;
+			
+			id = $(e.target).parents(".adv-item").attr("data-product-id") ||
+			 $(e.target).parents(".fl-product").attr("data-product-id");
 
 
+			collection = App.imgCollection;
 
 			if(container && collection[id])
 			{
 
+				
 				step = container.scrollWidth / Object.keys(collection[id]).length;
 				posMouse = e.originalEvent.offsetX;
 				index = Math.floor(posMouse / step);
@@ -124,9 +134,11 @@ App = {
 					nav.removeClass("active");
 					$(nav[index]).addClass("active");
 
+					
 
 					if(collection[id][index])
 					{
+						console.log(collection[id][index])
 						e.target.src = collection[id][index];	
 					}	
 				}
@@ -138,9 +150,20 @@ App = {
 	},
 	// CARD PRODUCT END
 
+	imgCollectionPush: function(id, object)
+	{
+		if(this.imgCollection.indexOf(id) >= 0)
+		{
+			return false;
+		}
+
+		this.imgCollection[id] = object
+	},
 
 	initEventHandler: function()
 	{
+		let _self = this;
+
 		$(".favorite").on('click', this.setFavorite);
 
 		$(".detail-list-photo").on("click", ".item", this.detailSetBitPhoto);
@@ -154,6 +177,8 @@ App = {
 		$(".files-add-list input[type=file]").on('change', this.photo.add);
 
 		$(".adv-item .preview").on("mousemove", this.cardGalleryPreview)
+
+		$(".fl-product .preview").on("mousemove", this.cardGalleryPreview)
 	},
 
 

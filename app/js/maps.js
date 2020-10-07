@@ -1,4 +1,4 @@
-
+var test;
 document.addEventListener("DOMContentLoaded", function(){
 	/*ymaps.ready(function () {  
 		var map = new ymaps.Map("map", {
@@ -7,16 +7,19 @@ document.addEventListener("DOMContentLoaded", function(){
 		});
 	});*/
 
-	$('.scrollbar-inner').scrollbar({ autoScrollSize: false });
+	/*jQuery('.scrollbar-inner').scrollbar({
+		"showArrows": true,
+		"scrolly": "advanced"
+	});*/
+
+	OverlayScrollbars($('.scrollbar-inner'), {}); 
 
 	document.querySelector(".map-filter .filter-head").addEventListener("click", function(e){
 		e.preventDefault();
 		let parent = e.target.closest(".filter");
 		parent.classList.toggle("active");
-		// parent.querySelector(".filter-cnt").addEventListener("transitionend", )
 		return false;
 	});
-
 
 })
 

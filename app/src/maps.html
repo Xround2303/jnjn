@@ -1,33 +1,159 @@
 <!-- include "/main/header.html" -->
 <link rel="stylesheet" href="css/maps.css">
-<link rel="stylesheet" href="libs/jquery.scrollbar/jquery.scrollbar.css">
-<link rel="stylesheet" href="css/scrollbar.theme.css">
+<link rel="stylesheet" href="libs/OverlayScrollbars/css/OverlayScrollbars.css">
+<link rel="stylesheet" href="css/OverlayScrollbars.theme.css">
 
 <div id="jnjnmap">
 	<div class="ymap" id="map"></div>
 	<div class="filter-wrp">
-		<div class="filter map-filter">
+		<div class="filter map-filter ">
 				<div class="filter-head">
 					<div class="title">Фильтр</div>
 					<i class="fas fa-angle-up"></i>
 				</div>
 				<div class="filter-cnt-wrp">
 					<div class="filter-cnt scrollbar-inner">
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
+						<div class="fl-item-fill">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item-fill">
+							<div class="btn-radio-group">
+							<div class="item-check">
+								<input type="radio" checked="" name="btn-radio" id="btn-radio-1">
+								<label for="btn-radio-1">Все</label>
+							</div>
+							<div class="item-check">
+								<input type="radio" name="btn-radio" id="btn-radio-2">
+								<label for="btn-radio-2">Продать</label>
+							</div>
+							<div class="item-check">
+								<input type="radio" name="btn-radio" id="btn-radio-3">
+								<label for="btn-radio-3">Сдать</label>
+							</div>
+						</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Вид объекта</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Новостройка</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item">
+							<div class="select-group">
+								<label for="select-1">Тип недвижимости</label>
+								<div class="select">
+									<select id="select-1">
+										<option>Квартира</option>
+										<option>Дом</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="fl-item-fill">
+							<div class="check-group">
+									<div class="item-check">
+										<input type="checkbox" id="check-1">
+										<label for="check-1" class="checkbox"></label>
+										<label for="check-1">Показывать только с фото</label>
+									</div>
+								</div>
+						</div>
 					</div>					
 				</div>
 
@@ -39,21 +165,17 @@
 				</div>
 				<div class="filter-cnt-wrp">
 					<div class="filter-cnt scrollbar-inner">
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
-						<div class="item">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Velit eveniet aut at cupiditate consequuntur obcaecati molestiae cum dolor, atque, quos.</div>
+						
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						<!-- include "/elements/fl-item.html" -->
+						
+						<div class="item-empty" style="display: none;">По указанному фильтру нет доступных для просмотра объявлений</div>
 					</div>					
 				</div>	
 		</div>
@@ -61,7 +183,7 @@
 	
 </div>
 
-<script src="libs/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="libs/OverlayScrollbars/js/OverlayScrollbars.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f71d7cfe-8faf-4f12-9ea4-d76ea6c43251"></script>
 <script src="js/maps.js"></script>
 <!-- include "/main/footer.html" -->
