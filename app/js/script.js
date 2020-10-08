@@ -138,7 +138,6 @@ App = {
 
 					if(collection[id][index])
 					{
-						console.log(collection[id][index])
 						e.target.src = collection[id][index];	
 					}	
 				}
