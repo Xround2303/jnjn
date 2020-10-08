@@ -8,12 +8,16 @@ JNFilter = {
 		this.event();
 		this.filter.init();
 		this.loader.init();
-		this.map.init();
 		this.libs.init();
 
 	},
 
-	event: function(){},
+	event: function(){
+		let _self = this;
+		ymaps.ready(function(){
+			_self.map.init();
+		});
+	},
 
 };
 
@@ -31,12 +35,12 @@ JNFilter.loader = {
 	show: function()
 	{
 		this.container.style.display = "flex";
-		this.container.classList.add("active")		
+		this.container.classList.add("active")
 	},
 
 	hide: function()
-	{		
-		this.container.classList.remove("active")
+	{
+		this.container.classList.remove("active");
 	},
 
 	event: function()
@@ -51,29 +55,103 @@ JNFilter.loader = {
 };
 
 JNFilter.map = {
+
+	collection: {},
+
 	init: function()
 	{
-		/*ymaps.ready(function () {  
-			var map = new ymaps.Map("map", {
-			  center: [55.76, 37.64], 
-			  zoom: 10
+		this.map = new ymaps.Map("map", {
+			center: [55.76, 37.64],
+			zoom: 10,
+			controls: []
+		});
+		this.objectManager = new ymaps.ObjectManager({
+			clusterize: true,
+			geoObjectOpenBalloonOnClick: true,
+			clusterOpenBalloonOnClick: true
+		});
+		this.map.geoObjects.add(this.objectManager);
+
+		this.map.events.add(['boundschange','datachange','objecttypeschange'], function(e){
+
+			JNFilter.filter.formSave();
+			return false;
+
+			let dataObject = [];
+			objectManager.objects.each(function (object) {
+
+				let objectState = objectManager.getObjectState(object.id);
+				let bounds = map.getBounds();
+				let contains = ymaps.util.bounds.containsPoint(bounds, object.geometry.coordinates);
+
+				if (objectState.isShown && contains) {
+					dataObject.push(object.id);
+				}
+
 			});
-		});*/
-	}
+			console.log("Точки в зоне видимости:", dataObject);
+		});
+
+	},
+
+	pointRender: function(data) {
+		this.collection = data;
+		this.objectManager.objects.removeAll();
+		this.objectManager.add(this.collection);
+	},
+
+
+
+
 };
 
 JNFilter.filter = {
 	
 	elements: {},
-	options: {},
+	options: {
+		delaySendFormData: 0,
+	},
 
 	init: function()
 	{
 		this.elements.container = document.querySelector(".map-filter");
-		this.elements.container.querySelectorAll("input, select");
-
+		this.elements.form = this.elements.container.querySelector("form");
+		this.elements.inputs = this.elements.container.querySelectorAll("input, select");
 
 		this.event();
+	},
+
+	formSave: function(target)
+	{
+
+		let _self = this;
+		let data = new FormData(this.elements.form);
+
+		if(this.options.timeoutFilterFormSend)
+		{
+			clearTimeout((this.options.timeoutFilterFormSend));
+		}
+
+		this.options.timeoutFilterFormSend = setTimeout(
+			function () {
+				_self.formSend(data);
+			},
+			this.options.delaySendFormData
+		);
+	},
+
+	formSend: function(data)
+	{
+		let _self = this;
+		// JNFilter.loader.show();
+		$.ajax({
+			url: "/data/point.json"
+		}).done(function(data) {
+			setTimeout(function () {
+				JNFilter.map.pointRender(data);
+				// JNFilter.loader.hide();
+			}, 200)
+		});
 	},
 
 	open: function()
@@ -92,11 +170,12 @@ JNFilter.filter = {
 			.classList.contains("active");
 	},
 
+
 	event: function()
 	{
 		let _self = this;
 		this.elements.container.querySelector(".filter-head")
-		.addEventListener("click", function(e){
+			.addEventListener("click", function(e){
 			e.preventDefault();
 			if(_self.isOpen())
 			{
@@ -108,6 +187,10 @@ JNFilter.filter = {
 			}
 			return false;
 		});
+
+		for(let input of this.elements.inputs)
+			input.addEventListener("change", this.formSave.bind(this));
+
 	}
 };
 
@@ -116,7 +199,7 @@ JNFilter.libs = {
 	{
 		if(OverlayScrollbars)
 		{
-			OverlayScrollbars(document.querySelectorAll('.scrollbar-inner'), {});	
+			OverlayScrollbars(document.querySelectorAll('.scrollbar-inner'), {});
 		}
 		
 	}

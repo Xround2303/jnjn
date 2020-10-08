@@ -42,7 +42,7 @@
     -webkit-border-radius: 3px;
             border-radius: 3px;
     overflow: hidden;
-    padding: 0px 20px;
+    padding: 0 20px;
     width: 100%; }
     #jnjnmap .filter .filter-cnt-wrp {
       height: 0;
@@ -81,6 +81,8 @@
       #jnjnmap .filter .filter-cnt .fl-item.fl-item--fill {
         margin-bottom: 5px;
         width: 100%; }
+      #jnjnmap .filter .filter-cnt .fl-item.fl-item--fill:nth-of-type(2n) {
+        margin-left: 0; }
     #jnjnmap .filter .fl-product {
       display: -webkit-box;
       display: -webkit-flex;
@@ -204,9 +206,9 @@
         -ms-flex-align: center;
             align-items: center;
     font-size: 46px;
-    -webkit-transition: opacity .2s linear;
-    -o-transition: opacity .2s linear;
-    transition: opacity .2s linear; }
+    -webkit-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    transition: opacity .3s linear; }
     #jnjnmap .loader .fa-spin {
       -webkit-animation: fa-spin .6s infinite linear;
               animation: fa-spin .6s infinite linear; }
