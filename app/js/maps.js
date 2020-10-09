@@ -173,14 +173,16 @@ JNFilter.items = {
 		// document.querySelector(".item-empty")
 	},
 
-	renderList: function(items)
+	renderList: function(items, method)
 	{
 		this.items = items;
-		this.uploading();
+		this.pagination.end = 0;
+		this.uploading(method);
 	},
 
-	render: function (items)
+	render: function (items, method)
 	{
+		if(!method) method = "";
 
 		let arTemplateItems = [];
 
@@ -200,7 +202,7 @@ JNFilter.items = {
 
 		}
 
-		this.draw(arTemplateItems, "append");
+		this.draw(arTemplateItems, method);
 
 	},
 
@@ -215,12 +217,12 @@ JNFilter.items = {
 		}
 	},
 
-	uploading: function()
+	uploading: function(method)
 	{
 		let counter = 0;
 		let groupItems = [];
 
-		if(this.pagination.end === this.items.length)
+		if(this.pagination.end++ >= this.items.length)
 		{
 			return false;
 		}
@@ -229,23 +231,20 @@ JNFilter.items = {
 		{
 			if(counter >= this.pagination.limit)
 			{
-				this.pagination.end = i++;
 				break;
 			}
 
 			groupItems.push(this.items[i]);
+			this.pagination.end = i;
 			counter++;
 		}
 
-		this.render(groupItems);
+
+		this.render(groupItems, method);
+		return true;
 	},
 
-	event: function()
-	{
-		/*document.querySelector(".filter-cnt").addEventListener("scroll", function () {
-			console.log("1");
-		});*/
-	}
+	event: function(){}
 };
 
 JNFilter.filter = {
@@ -346,25 +345,28 @@ JNFilter.filter = {
 JNFilter.libs = {
 	init: function()
 	{
-		let checkScroll = false;
 		if(OverlayScrollbars)
 		{
+			let checkScroll = false;
 			instance = OverlayScrollbars(document.querySelectorAll('.scrollbar-inner'), {
 				"callbacks": {
 					"onScroll": function(e)
 					{
-						/*console.log(e.target.scrollTop);
-						console.log(e.target.clientHeight);
-						console.log(e.target.scrollHeight);*/
 						if(e.target.scrollTop + e.target.clientHeight + 20 >=  e.target.scrollHeight)
 						{
 							if(!checkScroll)
 							{
-								checkScroll = true;
-								// JNFilter.items.uploading();
-								console.log(instance.scroll({x:50}))
+								if(JNFilter.items.uploading("append"))
+								{
+									instance[1].scroll({y: 0}, 300, undefined, function(){
+										checkScroll = false;
+									});
+								}
+								else
+								{
+									checkScroll = true;
+								}
 							}
-
 						}
 
 					}
