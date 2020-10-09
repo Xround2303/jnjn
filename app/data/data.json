@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "urlImages": "/img/detail-1.jpg",
+            "urlDetail": "/detail.html",
+            "price": 1400000,
+            "coordinates": [55.744522, 37.616378],
+            "name": "1 комнатная квартира"
+        },
+        {
+            "id": 2,
+            "urlImages": "/img/detail-2.jpg",
+            "urlDetail": "/detail.html",
+            "price": 120020,
+            "coordinates": [55.831903, 37.411961],
+            "name": "2-х комнатная квартира"
+        },
+        {
+            "id": 3,
+            "urlImages": "/img/detail-3.webp",
+            "urlDetail": "/detail.html",
+            "price": 170000,
+            "coordinates": [55.751841, 37.404853],
+            "name": "3-х комнатная квартира"
+        },
+        {
+            "id": 4,
+            "urlImages": "/img/detail-4.webp",
+            "urlDetail": "/detail.html",
+            "price": 1500000,
+            "coordinates": [55.716733, 37.589988],
+            "name": "4-х комнатная квартира"
+        }
+    ]
+}
