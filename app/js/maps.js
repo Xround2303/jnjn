@@ -1,6 +1,9 @@
 JNFilter = {
 
-	options: {},
+	options: {
+		blockScroll: false
+	},
+	scrollBars: {},
 
 	init: function()
 	{
@@ -11,7 +14,6 @@ JNFilter = {
 		this.loader.init();
 		this.libs.init();
 		this.map.init();
-
 
 		this.event();
 
@@ -73,8 +75,9 @@ JNFilter.map = {
 			});
 			_self.objectManager = new ymaps.ObjectManager({
 				clusterize: true,
-				geoObjectOpenBalloonOnClick: true,
-				clusterOpenBalloonOnClick: true
+				geoObjectOpenBalloonOnClick: false,
+				clusterOpenBalloonOnClick: false,
+				clusterDisableClickZoom: true,
 			});
 			_self.map.geoObjects.add(_self.objectManager);
 			_self.event();
@@ -108,7 +111,6 @@ JNFilter.map = {
 	{
 		this.setCollection(data);
 		this.pointDraw();
-
 		JNFilter.items.renderList(this.collection.features);
 	},
 
@@ -118,6 +120,7 @@ JNFilter.map = {
 
 		for(let item of this.collection.features)
 			if(item.id === itemID) return item;
+
 	},
 
 	event: function()
@@ -125,11 +128,26 @@ JNFilter.map = {
 		let _self = this;
 		this.map.events.add(['boundschange','datachange','objecttypeschange'], function(e){
 			JNFilter.filter.formSave();
+			JNFilter.filter.hide();
 		});
 
 		this.objectManager.events.add('click', function(e){
-			let item = _self.getPoint(e.get('objectId'));
-			JNFilter.items.render([item]);
+
+			let objectID = e.get('objectId');
+			let cluster = _self.objectManager.clusters.getById(objectID);
+			let items;
+
+			if(!cluster)
+			{
+				items = [_self.getPoint(objectID)];
+			}
+			else
+			{
+				items = _self.objectManager.clusters.getById(objectID).properties.geoObjects;
+			}
+
+			JNFilter.filter.hide();
+			JNFilter.items.renderList(items);
 		});
 	},
 
@@ -137,7 +155,9 @@ JNFilter.map = {
 
 JNFilter.items = {
 
-	elements: {},
+	elements: {
+		content: document.querySelector(".filter.map-items .cnt")
+	},
 	options: {},
 	pagination: {
 		limit: 6,
@@ -173,10 +193,18 @@ JNFilter.items = {
 		// document.querySelector(".item-empty")
 	},
 
+	clear: function()
+	{
+		JNFilter.options.blockScroll = false;
+		JNFilter.scrollBars.items.scroll({y: 0});
+		this.pagination.end = 0;
+		this.elements.content.innerHTML = "";
+	},
+
 	renderList: function(items, method)
 	{
 		this.items = items;
-		this.pagination.end = 0;
+		this.clear();
 		this.uploading(method);
 	},
 
@@ -189,11 +217,11 @@ JNFilter.items = {
 		for(let item of items)
 		{
 
-			let id = item;
+			let id = item.id;
 			let template = this.template;
 
 			template = template.replace("#ID#", id);
-			template = template.replace("#NAME#", "2-х комнатная квартира");
+			template = template.replace("#NAME#", id);
 			template = template.replace("#DETAIL_URL#", "/detail.html");
 			template = template.replace("#IMAGE#", `/img/detail-${Math.round(1 + Math.random() * (6 - 1))}.jpg`);
 			template = template.replace("#PRICE#", Math.round(100000 + Math.random() * (9000000 - 100000)));
@@ -209,11 +237,11 @@ JNFilter.items = {
 	draw: function(templates, method)
 	{
 		if(method !== "append")
-			document.querySelector(".filter-cnt .cnt").innerHTML = "";
+			this.clear();
 
 		for(let template of templates)
 		{
-			document.querySelector(".filter-cnt .cnt").insertAdjacentHTML("afterbegin", template)
+			this.elements.content.insertAdjacentHTML("beforeend", template)
 		}
 	},
 
@@ -222,23 +250,27 @@ JNFilter.items = {
 		let counter = 0;
 		let groupItems = [];
 
-		if(this.pagination.end++ >= this.items.length)
+
+		if(this.pagination.end + 1 >= this.items.length && this.items.length !== 1)
 		{
 			return false;
 		}
 
-		for(let i = this.pagination.end; i <= this.items.length; i++)
+		for(let i = this.pagination.end; i < this.items.length; i++)
 		{
+
 			if(counter >= this.pagination.limit)
 			{
 				break;
 			}
+
 
 			groupItems.push(this.items[i]);
 			this.pagination.end = i;
 			counter++;
 		}
 
+		this.pagination.end ++;
 
 		this.render(groupItems, method);
 		return true;
@@ -343,35 +375,30 @@ JNFilter.filter = {
 };
 
 JNFilter.libs = {
+
 	init: function()
 	{
 		if(OverlayScrollbars)
 		{
-			let checkScroll = false;
-			instance = OverlayScrollbars(document.querySelectorAll('.scrollbar-inner'), {
+			JNFilter.scrollBars.items = OverlayScrollbars(document.querySelector('.map-items .scrollbar-inner'), {
 				"callbacks": {
 					"onScroll": function(e)
 					{
-						if(e.target.scrollTop + e.target.clientHeight + 20 >=  e.target.scrollHeight)
+						if(e.target.scrollTop <= 0)
 						{
-							if(!checkScroll)
-							{
-								if(JNFilter.items.uploading("append"))
-								{
-									instance[1].scroll({y: 0}, 300, undefined, function(){
-										checkScroll = false;
-									});
-								}
-								else
-								{
-									checkScroll = true;
-								}
-							}
+							return false;
 						}
-
+						if(e.target.scrollTop + e.target.clientHeight + 50 >=  e.target.scrollHeight)
+						{
+							if(JNFilter.options.blockScroll) return false;
+							JNFilter.options.blockScroll = true;
+							if(JNFilter.items.uploading("append"))
+								JNFilter.options.blockScroll = false;
+						}
 					}
 				}
 			});
+			JNFilter.scrollBars.filter = OverlayScrollbars(document.querySelector('.map-filter .scrollbar-inner'), {})
 		}
 		
 	}
